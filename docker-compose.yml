@@ -20,8 +20,6 @@ services:
                - ./fhem/data/FHEM/99_myUtils.pm:/opt/fhem/FHEM/99_myUtils.pm
                - ./fhem/data/contrib/dblog/db.conf:/opt/fhem/contrib/dblog/db.conf
 
-       networks:
-               - code-network
        depends_on:
                - "mysql"
 
