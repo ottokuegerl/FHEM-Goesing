@@ -18,7 +18,13 @@
 - git clone https://github.com/ottokuegerl/FHEM-Goesing.git
 - cd FHEM-Goesing
 - cp ./fhem/data/fhem.cfg.example ./fhem/data/fhem.cfg
-- docker-compose up
+- docker-compose build
+- docker images
+
+## Start Container
+
+- parameter -d --> all container will start in background
+- docker-compose up -d
 
 ## Defaults
 
