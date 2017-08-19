@@ -1,17 +1,17 @@
 version: "3"
 services:
 fhem:
-	expose:
+    expose:
             - "8083"
             - "7072"
-        ports:
+    ports:
             - "8083:8083"
             - "7072:7072"
-        build: fhem
-        privileged: true
-        devices:
-          - "/dev/ttyUSB0:/dev/ttyUSB0"
-        volumes:
+    build: fhem
+    privileged: true
+    devices:
+            - "/dev/ttyUSB0:/dev/ttyUSB0"
+    volumes:
             - ./fhem/start.sh:/opt/fhem/start.sh
             - ./fhem/log/:/opt/fhem/log
             - ./fhem/backup/:/opt/fhem/backup
@@ -20,26 +20,26 @@ fhem:
             - ./fhem/data/FHEM/99_myUtils.pm:/opt/fhem/FHEM/99_myUtils.pm
             - ./fhem/data/contrib/dblog/db.conf:/opt/fhem/contrib/dblog/db.conf
 
-	networks:
+    networks:
             - code-network
-        depends_on:
+    depends_on:
             - "mysql"
 
 mysql:
-        expose:
+    expose:
             - "3306"
             - "33060"
-        ports:
+    ports:
             - "3306:3306"
             - "33060:33060"
-        image: mysql/mysql-server:latest
-        volumes:
+    image: mysql/mysql-server:latest
+    volumes:
             - ./mysql/init.sql:/docker-entrypoint-initdb.d/fhem-init.sql
             - ./mysql/data:/var/lib/mysql
-        environment:
+    environment:
             - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
 networks:
-   code-network:
+     code-network:
         driver: bridge
 
