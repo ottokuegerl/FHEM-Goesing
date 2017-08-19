@@ -20,11 +20,10 @@ attr WEB CssFiles hausautomatisierung-com/styles.css
 attr WEB JavaScripts codemirror/fhem_codemirror.js
 attr WEB editConfig 1
 attr WEB icon it_i-net
-attr WEB menuEntries haus-automatisierung.com,https://haus-automatisierung.com/
 attr WEB plotWeekStartDay 1
 attr WEB room System
 attr WEB roomIcons Homekit:audio_audio Log:edit_paste System:it_network Save.config:message_attention Everything:it_i-net Unsorted:unknown Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings
-attr WEB title FHEM Docker (haus-automatisierung.com)
+attr WEB title FHEM-Goesing-Docker
 
 # Fake FileLog entry, to access the fhem log from FHEMWEB
 define Logfile FileLog ./log/fhem-%Y-%m.log fakelog
@@ -41,11 +40,13 @@ attr eventTypes room System
 # Disable this to avoid looking for new USB devices on startup
 define initialUsbCheck notify global:INITIALIZED usb create
 attr initialUsbCheck room System
+# DBLogging
 define DBLogging DbLog /opt/fhem/contrib/dblog/db.conf .*:.*
 attr DBLogging icon time_note
 attr DBLogging room Log
 define DBLogging_Reopen at +*00:15:00 set DBLogging reopen
 attr DBLogging_Reopen room Log
+# TestSwitch
 define testSwitch dummy
 attr testSwitch genericDeviceType switch
 attr testSwitch room Homekit

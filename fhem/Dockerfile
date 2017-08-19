@@ -1,13 +1,27 @@
 FROM debian:jessie
 
-MAINTAINER Matthias Kleine <info@haus-automatisierung.com>
+MAINTAINER Otto KUEGERL
 
+ENV FHEM_VERSION 5.8
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 # Install dependencies
 RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends apt-utils
-RUN apt-get -y --force-yes install perl wget git apt-transport-https sudo etherwake dfu-programmer build-essential snmpd snmp vim telnet usbutils
+RUN apt-get -y --force-yes install \
+perl \
+wget \
+git \
+apt-transport-https \
+sudo etherwake \
+dfu-programmer \
+build-essential \
+snmpd \
+snmp \
+vim \
+telnet \
+usbutils \
+sqlite3
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
@@ -34,13 +48,15 @@ libsys-hostname-long-perl \
 libterm-readkey-perl \
 libterm-readline-perl-perl \
 libwww-perl \
-libxml-simple-perl
+libxml-simple-perl \
+libdbd-sqlite3-perl \
+libtext-diff-perl
 
 # Install fhem
-
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
 
-RUN wget https://fhem.de/fhem-5.8.deb && dpkg -i fhem-5.8.deb
+RUN wget https://fhem.de/fhem-${FHEM_VERSION}.deb && dpkg -i fhem-${FHEM_VERSION}.deb
+RUN userdel fhem
 
 WORKDIR "/opt/fhem"
 

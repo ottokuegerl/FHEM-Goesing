@@ -1,8 +1,6 @@
 version: "3"
 services:
-
 fhem:
-        # image username/repo
 	expose:
             - "8083"
             - "7072"
@@ -22,6 +20,11 @@ fhem:
             - ./fhem/data/FHEM/99_myUtils.pm:/opt/fhem/FHEM/99_myUtils.pm
             - ./fhem/data/contrib/dblog/db.conf:/opt/fhem/contrib/dblog/db.conf
 
+	networks:
+            - code-network
+        depends_on:
+            - "mysql"
+
 mysql:
         expose:
             - "3306"
@@ -35,4 +38,8 @@ mysql:
             - ./mysql/data:/var/lib/mysql
         environment:
             - MYSQL_RANDOM_ROOT_PASSWORD=yes
+
+networks:
+   code-network:
+        driver: bridge
 
