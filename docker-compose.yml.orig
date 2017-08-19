@@ -39,3 +39,7 @@ services:
        environment:
                - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
+networks:
+     code-network:
+        driver: bridge
+
