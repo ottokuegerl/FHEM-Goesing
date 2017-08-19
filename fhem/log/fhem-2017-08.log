@@ -1,0 +1,463 @@
+2017.08.14 20:22:43 1: Including fhem.cfg
+2017.08.14 20:22:43 2: eventTypes: loaded 4 events from ./log/eventTypes.txt
+2017.08.14 20:22:43 1: Including ./log/fhem.save
+2017.08.14 20:22:43 1: usb create starting
+2017.08.14 20:22:44 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.14 20:22:44 1: usb create end
+2017.08.14 20:22:44 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.14 20:22:44 0: Featurelevel: 5.8
+2017.08.14 20:22:44 0: Server started with 9 defined entities (fhem.pl:14634/2017-07-03 perl:5.020002 os:linux user:root pid:8)
+2017.08.14 20:24:56 1: 
+2017.08.14 20:24:56 1: fhem
+2017.08.14 20:24:56 1: UPD ./CHANGED
+2017.08.14 20:24:56 1: UPD ./configDB.pm
+2017.08.14 20:24:56 1: UPD ./fhem.pl
+2017.08.14 20:24:57 1: UPD FHEM/00_FHZ.pm
+2017.08.14 20:24:57 1: UPD FHEM/00_HMUARTLGW.pm
+2017.08.14 20:24:57 1: UPD FHEM/00_TCM.pm
+2017.08.14 20:24:57 1: UPD FHEM/00_THZ.pm
+2017.08.14 20:24:57 1: UPD FHEM/00_ZWCUL.pm
+2017.08.14 20:24:57 1: UPD FHEM/00_ZWDongle.pm
+2017.08.14 20:24:57 1: UPD FHEM/01_FHEMWEB.pm
+2017.08.14 20:24:57 1: UPD FHEM/10_CUL_HM.pm
+2017.08.14 20:24:57 1: UPD FHEM/10_FS20.pm
+2017.08.14 20:24:58 1: UPD FHEM/10_IT.pm
+2017.08.14 20:24:58 1: UPD FHEM/10_ZWave.pm
+2017.08.14 20:24:58 1: UPD FHEM/11_FHT.pm
+2017.08.14 20:24:58 1: UPD FHEM/11_FHT8V.pm
+2017.08.14 20:24:58 1: UPD FHEM/12_HMS.pm
+2017.08.14 20:24:58 1: UPD FHEM/13_KS300.pm
+2017.08.14 20:24:58 1: UPD FHEM/14_CUL_TCM97001.pm
+2017.08.14 20:24:58 1: UPD FHEM/14_CUL_TX.pm
+2017.08.14 20:24:58 1: UPD FHEM/14_CUL_WS.pm
+2017.08.14 20:24:58 1: UPD FHEM/15_CUL_EM.pm
+2017.08.14 20:24:58 1: UPD FHEM/16_CUL_RFR.pm
+2017.08.14 20:24:58 1: UPD FHEM/18_CUL_HOERMANN.pm
+2017.08.14 20:24:58 1: UPD FHEM/21_OWLCD.pm
+2017.08.14 20:24:58 1: UPD FHEM/21_OWMULTI.pm
+2017.08.14 20:24:58 1: UPD FHEM/21_OWSWITCH.pm
+2017.08.14 20:24:58 1: UPD FHEM/22_HOMEMODE.pm
+2017.08.14 20:24:58 1: UPD FHEM/31_Nello.pm
+2017.08.14 20:24:58 1: UPD FHEM/33_readingsChange.pm
+2017.08.14 20:24:58 1: UPD FHEM/34_ESPEasy.pm
+2017.08.14 20:24:59 1: UPD FHEM/36_EleroDrive.pm
+2017.08.14 20:24:59 1: UPD FHEM/36_EleroStick.pm
+2017.08.14 20:24:59 1: UPD FHEM/36_EleroSwitch.pm
+2017.08.14 20:24:59 1: UPD FHEM/37_Spotify.pm
+2017.08.14 20:24:59 1: UPD FHEM/42_SYSMON.pm
+2017.08.14 20:24:59 1: UPD FHEM/49_SSCam.pm
+2017.08.14 20:24:59 1: UPD FHEM/50_TelegramBot.pm
+2017.08.14 20:24:59 1: UPD FHEM/57_Calendar.pm
+2017.08.14 20:24:59 1: UPD FHEM/61_EMWZ.pm
+2017.08.14 20:24:59 1: UPD FHEM/62_EMEM.pm
+2017.08.14 20:24:59 1: UPD FHEM/70_BRAVIA.pm
+2017.08.14 20:25:00 1: UPD FHEM/70_NEUTRINO.pm
+2017.08.14 20:25:00 1: UPD FHEM/70_PIONEERAVR.pm
+2017.08.14 20:25:00 1: UPD FHEM/70_WINCONNECT.pm
+2017.08.14 20:25:00 1: UPD FHEM/72_FB_CALLMONITOR.pm
+2017.08.14 20:25:00 1: UPD FHEM/73_AMADCommBridge.pm
+2017.08.14 20:25:00 1: UPD FHEM/74_AMADDevice.pm
+2017.08.14 20:25:00 1: UPD FHEM/90_at.pm
+2017.08.14 20:25:00 1: UPD FHEM/91_eventTypes.pm
+2017.08.14 20:25:00 1: UPD FHEM/91_notify.pm
+2017.08.14 20:25:00 1: UPD FHEM/91_sequence.pm
+2017.08.14 20:25:00 1: UPD FHEM/91_watchdog.pm
+2017.08.14 20:25:00 1: UPD FHEM/92_FileLog.pm
+2017.08.14 20:25:00 1: UPD FHEM/92_SingleFileLog.pm
+2017.08.14 20:25:00 1: UPD FHEM/93_DbLog.pm
+2017.08.14 20:25:01 1: UPD FHEM/93_FHEM2FHEM.pm
+2017.08.14 20:25:01 1: UPD FHEM/93_PWMR.pm
+2017.08.14 20:25:01 1: UPD FHEM/94_PWM.pm
+2017.08.14 20:25:01 1: UPD FHEM/95_holiday.pm
+2017.08.14 20:25:01 1: UPD FHEM/96_allowed.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_BOSEST.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_DOIF.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_DOIFtools.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_GOOGLECAST.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_SVG.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_alarmclock.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_cmdalias.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_fheminfo.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_help.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_structure.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_update.pm
+2017.08.14 20:25:01 1: UPD FHEM/98_weblink.pm
+2017.08.14 20:25:01 1: UPD FHEM/99_SUNRISE_EL.pm
+2017.08.14 20:25:02 1: UPD FHEM/HMConfig.pm
+2017.08.14 20:25:02 1: UPD FHEM/TcpServerUtils.pm
+2017.08.14 20:25:02 1: UPD FHEM/lib/74_AMADautomagicFlowset_4.0.3.xml
+2017.08.14 20:25:02 1: UPD docs/commandref_frame.html
+2017.08.14 20:25:02 1: UPD docs/commandref_frame_DE.html
+2017.08.14 20:25:02 1: UPD www/images/fhemSVG/HutschIcon3.svg
+2017.08.14 20:25:02 1: UPD www/pgm2/fhemweb.js
+2017.08.14 20:25:02 1: saving fhem.cfg
+2017.08.14 20:25:02 1: saving ./log/fhem.save
+2017.08.14 20:25:02 1: 
+2017.08.14 20:25:02 1: New entries in the CHANGED file:
+2017.08.14 20:25:02 1:   - feature: 34_ESPEasy: reject non local IPs wo/ basic auth
+2017.08.14 20:25:02 1:   - bugfix:  50_TelegramBot: delayed retry & rename (#msg668108)
+2017.08.14 20:25:02 1:   - changed: 70_BRAVIA: renamed reading/internal modelName to model
+2017.08.14 20:25:02 1:   - new:     98_GOOGLECAST: first release, read commandref for requirements
+2017.08.14 20:25:02 1:   - changed: 74_AMADautomagicFlowset_4.0.3.xml: workaround for better auto
+2017.08.14 20:25:02 1:                                                 flowsetupdate
+2017.08.14 20:25:02 1:   - feature: 74_AMADDevice: 4.0.5 - Support für NFC and scanning NFC TagId
+2017.08.14 20:25:02 1:   - bugfix:  74_AMADautomagicFlowset_4.0.2.xml: fix openApp Trigger
+2017.08.14 20:25:02 1:   - bugfix:  31_Nello: fixed device ID detection
+2017.08.14 20:25:02 1:   - feature: 93_DbLog: V2.22.1, new attribute "suppressAddLogV3"
+2017.08.14 20:25:02 1:   - feature: 49_SSCam: V2.6.1, new commands snapGallery, createSnapGallery and
+2017.08.14 20:25:02 1:                        corresponding attributes
+2017.08.14 20:25:02 1:   - feature: 34_ESPEasy.pm: plugin neopixelfx/nfx added (Forum #73949)
+2017.08.14 20:25:02 1:   - new:     31_Nello: first release
+2017.08.14 20:25:02 1:   - feature: 01_FHEMWEB.pm: add webCmdLabel (Forum #72581)
+2017.08.14 20:25:02 1:   - changed: fhem.pl: search cmds via lowercase/abbrev in modules (Forum #75007)
+2017.08.14 20:25:02 1:   - changed: 14_CUL_TCM97001: Add rain/wind Sensor
+2017.08.14 20:25:02 1:   - changed: 10_IT: Add FreeTec update documentation
+2017.08.14 20:25:02 1:   - changed: configDB: store files base64 encoded, Forum:#74302
+2017.08.14 20:25:02 1:   - bugfix:  93_DbLog, back to V2.22.0, Forum:#75039
+2017.08.14 20:25:02 1:   - bugfix:  93_DbLog, V2.22.1, Forum:#74690, warning unitialized value
+2017.08.14 20:25:02 1:   - feature: 70_WINCONNECT: [WinWebGUI] - Fenster verstecken
+2017.08.14 20:25:02 1:   - feature: 57_Calendar: added attribute cutoffOlderThan (forum #74481)
+2017.08.14 20:25:02 1:   - feature: fhem.pl: add -d option for debugging (Forum #74774)
+2017.08.14 20:25:02 1:   - bugfix:  74_AMADDevice: fix decode_utf8 call in eval
+2017.08.14 20:25:02 1:   - feature: 57_Calendar: reduce memory footprint (forum #74481)
+2017.08.14 20:25:02 1: ... rest of lines skipped.
+2017.08.14 20:25:02 1: 
+2017.08.14 20:25:02 1: 
+2017.08.14 20:25:02 1: fhemabfall
+2017.08.14 20:25:02 1: UPD FHEM/57_ABFALL.pm
+2017.08.14 20:25:02 1: saving fhem.cfg
+2017.08.14 20:25:02 1: saving ./log/fhem.save
+2017.08.14 20:25:02 1: 
+2017.08.14 20:25:02 1: New entries in the CHANGED file:
+2017.08.14 20:25:02 1: FHEM ABFALL and more last change:
+2017.08.14 20:25:02 1: 2017-07-26
+2017.08.14 20:25:02 1:  - prepare new version
+2017.08.14 20:25:02 1: 
+2017.08.14 20:25:02 1: 
+2017.08.14 20:25:02 1: fhemtabletui
+2017.08.14 20:25:03 1: UPD www/tablet/css/fhem-blue-ui.css
+2017.08.14 20:25:03 1: UPD www/tablet/css/fhem-darkblue-ui.css
+2017.08.14 20:25:03 1: UPD www/tablet/css/fhem-green-ui.css
+2017.08.14 20:25:03 1: UPD www/tablet/css/fhem-mobil-ui.css
+2017.08.14 20:25:03 1: UPD www/tablet/css/fhem-tablet-ui-wdtimer.css
+2017.08.14 20:25:03 1: UPD www/tablet/css/fhem-tablet-ui.css
+2017.08.14 20:25:04 1: UPD www/tablet/css/fhem-tablet-ui.min.css
+2017.08.14 20:25:04 1: UPD www/tablet/css/ftui-bright-mint-ui.css
+2017.08.14 20:25:04 1: UPD www/tablet/css/ftui_chart.css
+2017.08.14 20:25:04 1: UPD www/tablet/css/ftui_colorwheel.css
+2017.08.14 20:25:04 1: UPD www/tablet/css/ftui_departure.css
+2017.08.14 20:25:05 1: UPD www/tablet/css/ftui_medialist.css
+2017.08.14 20:25:05 1: UPD www/tablet/css/ftui_range.css
+2017.08.14 20:25:05 1: UPD www/tablet/css/ftui_slideout.css
+2017.08.14 20:25:05 1: UPD www/tablet/css/ftui_spinner.css
+2017.08.14 20:25:05 1: UPD www/tablet/css/ftui_weekprofile.css
+2017.08.14 20:25:05 1: UPD www/tablet/demo_ftui.html
+2017.08.14 20:25:05 1: UPD www/tablet/fonts/fhemSVG.eot
+2017.08.14 20:25:06 1: UPD www/tablet/fonts/fhemSVG.svg
+2017.08.14 20:25:06 1: UPD www/tablet/fonts/fhemSVG.ttf
+2017.08.14 20:25:06 1: UPD www/tablet/fonts/fhemSVG.woff
+2017.08.14 20:25:06 1: UPD www/tablet/fonts/fontawesome-License.txt
+2017.08.14 20:25:07 1: UPD www/tablet/fonts/fontawesome-webfont.eot
+2017.08.14 20:25:07 1: UPD www/tablet/fonts/fontawesome-webfont.svg
+2017.08.14 20:25:07 1: UPD www/tablet/fonts/fontawesome-webfont.ttf
+2017.08.14 20:25:08 1: UPD www/tablet/fonts/fontawesome-webfont.woff
+2017.08.14 20:25:08 1: UPD www/tablet/fonts/fontawesome-webfont.woff2
+2017.08.14 20:25:08 1: UPD www/tablet/fonts/FontAwesome.otf
+2017.08.14 20:25:08 1: UPD www/tablet/fonts/FTUI-icons.svg
+2017.08.14 20:25:08 1: UPD www/tablet/fonts/FTUI-icons.ttf
+2017.08.14 20:25:09 1: UPD www/tablet/fonts/FTUI-icons.woff
+2017.08.14 20:25:09 1: UPD www/tablet/fonts/MaterialIcons-Regular.eot
+2017.08.14 20:25:09 1: UPD www/tablet/fonts/MaterialIcons-Regular.ijmap
+2017.08.14 20:25:09 1: UPD www/tablet/fonts/MaterialIcons-Regular.svg
+2017.08.14 20:25:10 1: UPD www/tablet/fonts/MaterialIcons-Regular.ttf
+2017.08.14 20:25:10 1: UPD www/tablet/fonts/MaterialIcons-Regular.woff
+2017.08.14 20:25:10 1: UPD www/tablet/fonts/MaterialIcons-Regular.woff2
+2017.08.14 20:25:10 1: UPD www/tablet/fonts/meteocons-License.txt
+2017.08.14 20:25:10 1: UPD www/tablet/fonts/meteocons-webfont.eot
+2017.08.14 20:25:11 1: UPD www/tablet/fonts/meteocons-webfont.svg
+2017.08.14 20:25:11 1: UPD www/tablet/fonts/meteocons-webfont.ttf
+2017.08.14 20:25:11 1: UPD www/tablet/fonts/meteocons-webfont.woff
+2017.08.14 20:25:11 1: UPD www/tablet/fonts/openautomation.eot
+2017.08.14 20:25:12 1: UPD www/tablet/fonts/openautomation.svg
+2017.08.14 20:25:13 1: UPD www/tablet/fonts/openautomation.ttf
+2017.08.14 20:25:14 1: UPD www/tablet/fonts/openautomation.woff
+2017.08.14 20:25:14 1: UPD www/tablet/fonts/Roboto-Thin-webfont-License.txt
+2017.08.14 20:25:14 1: UPD www/tablet/fonts/Roboto-Thin-webfont.eot
+2017.08.14 20:25:14 1: UPD www/tablet/fonts/Roboto-Thin-webfont.svg
+2017.08.14 20:25:15 1: UPD www/tablet/fonts/Roboto-Thin-webfont.ttf
+2017.08.14 20:25:15 1: UPD www/tablet/fonts/Roboto-Thin-webfont.woff
+2017.08.14 20:25:15 1: UPD www/tablet/fonts/weathericons-regular-webfont.eot
+2017.08.14 20:25:15 1: UPD www/tablet/fonts/weathericons-regular-webfont.svg
+2017.08.14 20:25:15 1: UPD www/tablet/fonts/weathericons-regular-webfont.ttf
+2017.08.14 20:25:16 1: UPD www/tablet/fonts/weathericons-regular-webfont.woff
+2017.08.14 20:25:16 1: UPD www/tablet/fonts/weathericons-regular-webfont.woff2
+2017.08.14 20:25:16 1: UPD www/tablet/ftui_snippet_tester.html
+2017.08.14 20:25:16 1: UPD www/tablet/index-example.html
+2017.08.14 20:25:16 1: UPD www/tablet/index_empty.html
+2017.08.14 20:25:17 1: UPD www/tablet/index_layout.html
+2017.08.14 20:25:17 1: UPD www/tablet/index_state.html
+2017.08.14 20:25:17 1: UPD www/tablet/js/fhem-tablet-ui.js
+2017.08.14 20:25:17 1: UPD www/tablet/js/fhem-tablet-ui.min.js
+2017.08.14 20:25:17 1: UPD www/tablet/js/highcharts-meteogram.js
+2017.08.14 20:25:17 1: UPD www/tablet/js/widget_agenda.js
+2017.08.14 20:25:18 1: UPD www/tablet/js/widget_button.js
+2017.08.14 20:25:18 1: UPD www/tablet/js/widget_calview.js
+2017.08.14 20:25:18 1: UPD www/tablet/js/widget_chart.js
+2017.08.14 20:25:18 1: UPD www/tablet/js/widget_checkbox.js
+2017.08.14 20:25:18 1: UPD www/tablet/js/widget_circlemenu.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_classchanger.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_clock.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_colorwheel.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_datetimepicker.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_departure.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_dimmer.js
+2017.08.14 20:25:19 1: UPD www/tablet/js/widget_eventmonitor.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_example.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_famultibutton.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_filelog.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_fullcalview.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_gds.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_highchart.js
+2017.08.14 20:25:20 1: UPD www/tablet/js/widget_highchart3d.js
+2017.08.14 20:25:21 1: UPD www/tablet/js/widget_homestatus.js
+2017.08.14 20:25:21 1: UPD www/tablet/js/widget_html.js
+2017.08.14 20:25:21 1: UPD www/tablet/js/widget_iframe.js
+2017.08.14 20:25:21 1: UPD www/tablet/js/widget_image.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_input.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_itunes_artwork.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_joinedlabel.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_klimatrend.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_knob.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_label.js
+2017.08.14 20:25:22 1: UPD www/tablet/js/widget_level.js
+2017.08.14 20:25:23 1: UPD www/tablet/js/widget_link.js
+2017.08.14 20:25:23 1: UPD www/tablet/js/widget_loading.js
+2017.08.14 20:25:23 1: UPD www/tablet/js/widget_medialist.js
+2017.08.14 20:25:23 1: UPD www/tablet/js/widget_meteogram.js
+2017.08.14 20:25:23 1: UPD www/tablet/js/widget_multistatebutton.js
+2017.08.14 20:25:24 1: UPD www/tablet/js/widget_notify.js
+2017.08.14 20:25:24 1: UPD www/tablet/js/widget_pagebutton.js
+2017.08.14 20:25:24 1: UPD www/tablet/js/widget_pagetab.js
+2017.08.14 20:25:24 1: UPD www/tablet/js/widget_playstream.js
+2017.08.14 20:25:24 1: UPD www/tablet/js/widget_popup.js
+2017.08.14 20:25:24 1: UPD www/tablet/js/widget_progress.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_push.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_range.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_readingsgroup.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_rotor.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_select.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_settimer.js
+2017.08.14 20:25:25 1: UPD www/tablet/js/widget_simplechart.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_slideout.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_slider.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_spinner.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_svgplot.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_swiper.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_switch.js
+2017.08.14 20:25:26 1: UPD www/tablet/js/widget_symbol.js
+2017.08.14 20:25:27 1: UPD www/tablet/js/widget_thermostat.js
+2017.08.14 20:25:27 1: UPD www/tablet/js/widget_tts.js
+2017.08.14 20:25:27 1: UPD www/tablet/js/widget_uwz.js
+2017.08.14 20:25:27 1: UPD www/tablet/js/widget_volume.js
+2017.08.14 20:25:27 1: UPD www/tablet/js/widget_wakeup.js
+2017.08.14 20:25:27 1: UPD www/tablet/js/widget_wdtimer.js
+2017.08.14 20:25:28 1: UPD www/tablet/js/widget_weather.js
+2017.08.14 20:25:28 1: UPD www/tablet/js/widget_weekprofile.js
+2017.08.14 20:25:28 1: UPD www/tablet/js/widget_wind_direction.js
+2017.08.14 20:25:28 1: UPD www/tablet/lib/fa-multi-button.js
+2017.08.14 20:25:28 1: UPD www/tablet/lib/fa-multi-button.min.js
+2017.08.14 20:25:29 1: UPD www/tablet/lib/farbtastic.js
+2017.08.14 20:25:29 1: UPD www/tablet/lib/fhemSVG.css
+2017.08.14 20:25:29 1: UPD www/tablet/lib/font-awesome.min.css
+2017.08.14 20:25:29 1: UPD www/tablet/lib/highcharts/graphics/meteogram-symbols-30px.png
+2017.08.14 20:25:29 1: UPD www/tablet/lib/highcharts/highcharts-3d.js
+2017.08.14 20:25:29 1: UPD www/tablet/lib/highcharts/highcharts-more.js
+2017.08.14 20:25:29 1: UPD www/tablet/lib/highcharts/highcharts.js
+2017.08.14 20:25:30 1: UPD www/tablet/lib/highcharts/LICENSE
+2017.08.14 20:25:30 1: UPD www/tablet/lib/highcharts/themes/dark-blue.js
+2017.08.14 20:25:30 1: UPD www/tablet/lib/highcharts/themes/dark-green.js
+2017.08.14 20:25:30 1: UPD www/tablet/lib/highcharts/themes/dark-unica.js
+2017.08.14 20:25:31 1: UPD www/tablet/lib/highcharts/themes/gray.js
+2017.08.14 20:25:31 1: UPD www/tablet/lib/highcharts/themes/grid-light.js
+2017.08.14 20:25:31 1: UPD www/tablet/lib/highcharts/themes/grid.js
+2017.08.14 20:25:31 1: UPD www/tablet/lib/highcharts/themes/sand-signika.js
+2017.08.14 20:25:31 1: UPD www/tablet/lib/highcharts/themes/skies.js
+2017.08.14 20:25:31 1: UPD www/tablet/lib/jquery-ui.min.js
+2017.08.14 20:25:32 1: UPD www/tablet/lib/jquery.circlemenu.js
+2017.08.14 20:25:32 1: UPD www/tablet/lib/jquery.datetimepicker.css
+2017.08.14 20:25:32 1: UPD www/tablet/lib/jquery.datetimepicker.js
+2017.08.14 20:25:32 1: UPD www/tablet/lib/jquery.gridster.min.css
+2017.08.14 20:25:32 1: UPD www/tablet/lib/jquery.gridster.min.js
+2017.08.14 20:25:33 1: UPD www/tablet/lib/jquery.knob.mod.js
+2017.08.14 20:25:33 1: UPD www/tablet/lib/jquery.knob.mod.min.js
+2017.08.14 20:25:33 1: UPD www/tablet/lib/jquery.min.js
+2017.08.14 20:25:33 1: UPD www/tablet/lib/jquery.toast.min.css
+2017.08.14 20:25:33 1: UPD www/tablet/lib/jquery.toast.min.js
+2017.08.14 20:25:33 1: UPD www/tablet/lib/jquery.wakeup.js
+2017.08.14 20:25:34 1: UPD www/tablet/lib/material-icons.css
+2017.08.14 20:25:34 1: UPD www/tablet/lib/material-icons.min.css
+2017.08.14 20:25:34 1: UPD www/tablet/lib/openautomation.css
+2017.08.14 20:25:34 1: UPD www/tablet/lib/powerange.js
+2017.08.14 20:25:34 1: UPD www/tablet/lib/powerange.min.css
+2017.08.14 20:25:34 1: UPD www/tablet/lib/powerange.min.js
+2017.08.14 20:25:35 1: UPD www/tablet/lib/responsivevoice.js
+2017.08.14 20:25:35 1: UPD www/tablet/lib/slideout.min.js
+2017.08.14 20:25:35 1: UPD www/tablet/lib/swiper.jquery.min.js
+2017.08.14 20:25:35 1: UPD www/tablet/lib/swiper.min.css
+2017.08.14 20:25:35 1: UPD www/tablet/lib/switchery.js
+2017.08.14 20:25:35 1: UPD www/tablet/lib/switchery.min.css
+2017.08.14 20:25:36 1: UPD www/tablet/lib/switchery.min.js
+2017.08.14 20:25:36 1: UPD www/tablet/lib/weather-icons-wind.min.css
+2017.08.14 20:25:36 1: UPD www/tablet/lib/weather-icons.min.css
+2017.08.14 20:25:36 1: UPD www/tablet/repair.html
+2017.08.14 20:25:36 1: saving fhem.cfg
+2017.08.14 20:25:36 1: saving ./log/fhem.save
+2017.08.14 20:25:36 1: 
+2017.08.14 20:25:36 1: New entries in the CHANGED file:
+2017.08.14 20:25:36 1: FHEM Tablet UI last change:
+2017.08.14 20:25:36 1: 2017-08-04
+2017.08.14 20:25:36 1:  - Support data-get-on from reading
+2017.08.14 20:25:36 1: Calling /usr/bin/perl ./contrib/commandref_join.pl -noWarnings, this may take a while
+2017.08.14 20:25:41 1: 
+2017.08.14 20:25:41 1: update finished, "shutdown restart" is needed to activate the changes.
+2017.08.14 20:25:41 1: 
+2017.08.14 20:25:41 1: Please consider using the global attribute sendStatistics
+2017.08.14 20:26:03 0: Server shutdown
+2017.08.14 20:27:23 1: Including fhem.cfg
+2017.08.14 20:27:23 2: eventTypes: loaded 6 events from ./log/eventTypes.txt
+2017.08.14 20:27:23 1: Including ./log/fhem.save
+2017.08.14 20:27:23 1: usb create starting
+2017.08.14 20:27:23 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.14 20:27:23 1: usb create end
+2017.08.14 20:27:23 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.14 20:27:23 0: Featurelevel: 5.8
+2017.08.14 20:27:23 0: Server started with 9 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:8)
+2017.08.15 16:03:32 1: Including fhem.cfg
+2017.08.15 16:03:32 2: eventTypes: loaded 6 events from ./log/eventTypes.txt
+2017.08.15 16:03:32 1: Including ./log/fhem.save
+2017.08.15 16:03:32 1: usb create starting
+2017.08.15 16:03:32 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.15 16:03:32 1: usb create end
+2017.08.15 16:03:32 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.15 16:03:32 0: Featurelevel: 5.8
+2017.08.15 16:03:32 0: Server started with 9 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:8)
+2017.08.15 21:34:30 1: 
+2017.08.15 21:34:30 1: fhem
+2017.08.15 21:34:30 1: UPD ./CHANGED
+2017.08.15 21:34:30 1: UPD FHEM/00_HMUARTLGW.pm
+2017.08.15 21:34:30 1: UPD FHEM/49_SSCam.pm
+2017.08.15 21:34:31 1: UPD FHEM/93_DbLog.pm
+2017.08.15 21:34:31 1: UPD FHEM/HttpUtils.pm
+2017.08.15 21:34:31 1: saving fhem.cfg
+2017.08.15 21:34:31 1: saving ./log/fhem.save
+2017.08.15 21:34:31 1: 
+2017.08.15 21:34:31 1: New entries in the CHANGED file:
+2017.08.15 21:34:31 1:   - feature: 49_SSCam: V2.6.3, snapGallery can be triggered by e.g. notify
+2017.08.15 21:34:31 1:   - bugfix:  93_DbLog: V2.22.3, Forum:#74690, unitialized message in row ...
+2017.08.15 21:34:31 1: 
+2017.08.15 21:34:31 1: 
+2017.08.15 21:34:31 1: fhemabfall
+2017.08.15 21:34:31 1: nothing to do...
+2017.08.15 21:34:31 1: 
+2017.08.15 21:34:31 1: 
+2017.08.15 21:34:31 1: fhemtabletui
+2017.08.15 21:34:31 1: UPD www/tablet/js/fhem-tablet-ui.js
+2017.08.15 21:34:31 1: UPD www/tablet/js/fhem-tablet-ui.min.js
+2017.08.15 21:34:31 1: saving fhem.cfg
+2017.08.15 21:34:31 1: saving ./log/fhem.save
+2017.08.15 21:34:31 1: 
+2017.08.15 21:34:31 1: New entries in the CHANGED file:
+2017.08.15 21:34:31 1: FHEM Tablet UI last change:
+2017.08.15 21:34:31 1: 2017-08-15
+2017.08.15 21:34:31 1:  - Bugfix: catch null
+2017.08.15 21:34:31 1: Calling /usr/bin/perl ./contrib/commandref_join.pl -noWarnings, this may take a while
+2017.08.15 21:34:36 1: 
+2017.08.15 21:34:36 1: update finished, "shutdown restart" is needed to activate the changes.
+2017.08.15 21:34:36 1: 
+2017.08.15 21:34:36 1: Please consider using the global attribute sendStatistics
+2017.08.15 21:35:10 0: Server shutdown
+2017.08.16 19:32:28 1: Including fhem.cfg
+2017.08.16 19:32:28 2: eventTypes: loaded 10 events from ./log/eventTypes.txt
+2017.08.16 19:32:28 1: Including ./log/fhem.save
+2017.08.16 19:32:28 1: usb create starting
+2017.08.16 19:32:29 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.16 19:32:29 1: usb create end
+2017.08.16 19:32:29 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.16 19:32:29 0: Featurelevel: 5.8
+2017.08.16 19:32:29 0: Server started with 11 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:8)
+2017.08.16 19:35:45 1: PERL WARNING: Use of uninitialized value in numeric eq (==) at ./FHEM/74_AMAD.pm line 195.
+2017.08.16 19:47:41 1: Including fhem.cfg
+2017.08.16 19:47:41 2: eventTypes: loaded 10 events from ./log/eventTypes.txt
+2017.08.16 19:47:41 1: Including ./log/fhem.save
+2017.08.16 20:54:37 1: define AMADCommBridge AMAD: AMADCommBridge: Can't open server port at 8090: Address already in use
+2017.08.16 23:19:32 1: 
+2017.08.16 23:19:32 1: fhem
+2017.08.16 23:19:32 1: RMDIR: ./restoreDir/2017-07-22
+2017.08.16 23:19:32 1: UPD FHEM/01_FHEMWEB.pm
+2017.08.16 23:19:32 1: UPD FHEM/34_ESPEasy.pm
+2017.08.16 23:19:32 1: UPD www/pgm2/fhemweb.js
+2017.08.16 23:19:32 1: saving fhem.cfg
+2017.08.16 23:19:32 1: saving ./log/fhem.save
+2017.08.16 23:19:32 1: 
+2017.08.16 23:19:32 1: 
+2017.08.16 23:19:32 1: fhemabfall
+2017.08.16 23:19:33 1: nothing to do...
+2017.08.16 23:19:33 1: 
+2017.08.16 23:19:33 1: 
+2017.08.16 23:19:33 1: fhemtabletui
+2017.08.16 23:19:33 1: nothing to do...
+2017.08.16 23:19:33 1: Calling /usr/bin/perl ./contrib/commandref_join.pl -noWarnings, this may take a while
+2017.08.16 23:19:37 1: 
+2017.08.16 23:19:37 1: update finished, "shutdown restart" is needed to activate the changes.
+2017.08.16 23:19:37 1: 
+2017.08.16 23:19:37 1: Please consider using the global attribute sendStatistics
+2017.08.17 17:58:36 1: Including fhem.cfg
+2017.08.17 17:58:36 2: eventTypes: loaded 10 events from ./log/eventTypes.txt
+2017.08.17 17:58:36 1: Including ./log/fhem.save
+2017.08.17 17:58:36 1: usb create starting
+2017.08.17 17:58:36 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.17 17:58:36 1: usb create end
+2017.08.17 17:58:36 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.17 17:58:36 0: Featurelevel: 5.8
+2017.08.17 17:58:36 0: Server started with 10 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:8)
+2017.08.17 17:59:06 1: PERL WARNING: Use of uninitialized value $d in hash element at fhem.pl line 4023.
+2017.08.17 17:59:06 1: PERL WARNING: Use of uninitialized value $bname in concatenation (.) or string at ./FHEM/74_AMAD.pm line 339.
+2017.08.17 18:04:59 1: PERL WARNING: Use of uninitialized value in numeric eq (==) at ./FHEM/74_AMAD.pm line 195.
+2017.08.17 18:04:59 1: Including fhem.cfg
+2017.08.17 18:04:59 2: eventTypes: loaded 10 events from ./log/eventTypes.txt
+2017.08.17 18:04:59 1: Including ./log/fhem.save
+2017.08.17 18:15:46 0: Server shutdown
+2017.08.17 18:16:13 1: Including fhem.cfg
+2017.08.17 18:16:13 2: eventTypes: loaded 12 events from ./log/eventTypes.txt
+2017.08.17 18:16:14 1: Including ./log/fhem.save
+2017.08.17 18:16:14 1: usb create starting
+2017.08.17 18:16:14 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.17 18:16:14 1: usb create end
+2017.08.17 18:16:14 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.17 18:16:14 0: Featurelevel: 5.8
+2017.08.17 18:16:14 0: Server started with 8 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:8)
+2017.08.17 18:31:32 1: define AMADCommBridge AMAD: AMADCommBridge: Can't open server port at 8090: Address already in use
+2017.08.17 18:39:09 1: PERL WARNING: Use of uninitialized value in numeric eq (==) at ./FHEM/74_AMAD.pm line 195.
+2017.08.17 18:39:09 1: Including fhem.cfg
+2017.08.17 18:39:09 2: eventTypes: loaded 12 events from ./log/eventTypes.txt
+2017.08.17 18:39:09 1: Including ./log/fhem.save
+2017.08.17 18:49:40 0: Server shutdown
+2017.08.17 18:49:47 1: Including fhem.cfg
+2017.08.17 18:49:47 2: eventTypes: loaded 17 events from ./log/eventTypes.txt
+2017.08.17 18:49:47 1: Including ./log/fhem.save
+2017.08.17 18:49:47 1: usb create starting
+2017.08.17 18:49:48 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.17 18:49:48 1: usb create end
+2017.08.17 18:49:48 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.17 18:49:48 0: Featurelevel: 5.8
+2017.08.17 18:49:48 0: Server started with 9 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:7)
+2017.08.17 18:51:26 0: Server shutdown
+2017.08.17 18:51:32 1: Including fhem.cfg
+2017.08.17 18:51:32 2: eventTypes: loaded 17 events from ./log/eventTypes.txt
+2017.08.17 18:51:32 1: Including ./log/fhem.save
+2017.08.17 18:51:32 1: usb create starting
+2017.08.17 18:51:32 1: PERL WARNING: can't getattr: Input/output error at ./FHEM/DevIo.pm line 392.
+2017.08.17 18:51:32 1: usb create end
+2017.08.17 18:51:32 2: Error messages while initializing FHEM: configfile: testSwitch: unknown attribute genericDeviceType. Type 'attr testSwitch ?' for a detailed list.
+2017.08.17 18:51:32 0: Featurelevel: 5.8
+2017.08.17 18:51:32 0: Server started with 9 defined entities (fhem.pl:14854/2017-08-06 perl:5.020002 os:linux user:root pid:8)
