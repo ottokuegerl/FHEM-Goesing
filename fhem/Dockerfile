@@ -51,7 +51,10 @@ libterm-readline-perl-perl \
 libwww-perl \
 libxml-simple-perl \
 libdbd-sqlite3-perl \
-libtext-diff-perl
+libtext-diff-perl \
+libconvert-base32-perl \
+libauthen-oath-perl \
+libcrypt-urandom-perl
 
 # Install fhem
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
