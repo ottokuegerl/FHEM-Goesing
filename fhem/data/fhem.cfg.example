@@ -28,8 +28,7 @@ attr WEB icon it_i-net
 attr WEB plotWeekStartDay 1
 attr WEB menuEntries Update,cmd=update,UpdateCheck,cmd=update+check,Restart,cmd=shutdown+restart
 attr WEB room System
-attr WEB roomIcons Homekit:audio_audio Log:edit_paste System:it_network Save.config:message_attention Everything:it_i-net Unsorted:unknown Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings
-## attr WEB roomIcons Overview:status_comfort@green Aussen:status_away_1@yellow Wohnzimmer:scene_livingroom@yellow GZ:scene_livingroom@yellow Office_Laulau:scene_office@yellow Office_WPL:scene_office@yellow Galerie:light_floor_lamp@yellow Keller:control_building_kg@yellow DG:control_building_dg@yellow Batteriestatus:measure_battery_50 Homematic:hm_ccu Feuermelder:secur_smoke_detector Fahrtziele:it_i-net Alexa:alexa@blue Logging:icoLog System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
+attr WEB roomIcons Aussen:status_away_1@yellow Homekit:audio_audio Log:edit_paste System:it_network Save.config:message_attention Everything:it_i-net Unsorted:unknown Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
 attr WEB title FHEM-Goesing-Docker
 
 # Fake FileLog entry, to access the fhem log from FHEMWEB
