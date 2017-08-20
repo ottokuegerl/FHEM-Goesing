@@ -21,7 +21,8 @@ snmp \
 vim \
 telnet \
 usbutils \
-sqlite3
+sqlite3 \
+mc
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
