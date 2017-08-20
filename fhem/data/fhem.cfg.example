@@ -11,6 +11,11 @@ attr global updateInBackground 0
 attr global verbose 2
 attr global nofork 1
 attr global perlSyntaxCheck 1
+#########################################################################
+## Geo-Location: Aehrengasse 6, 3424 Wolfpassing
+#########################################################################
+attr global latitude 48.314129
+attr global longitude 16.180329
 
 define telnetPort telnet 7072 global
 attr telnetPort room System
@@ -21,8 +26,10 @@ attr WEB JavaScripts codemirror/fhem_codemirror.js
 attr WEB editConfig 1
 attr WEB icon it_i-net
 attr WEB plotWeekStartDay 1
+attr WEB menuEntries Update,cmd=update,UpdateCheck,cmd=update+check,Restart,cmd=shutdown+restart
 attr WEB room System
 attr WEB roomIcons Homekit:audio_audio Log:edit_paste System:it_network Save.config:message_attention Everything:it_i-net Unsorted:unknown Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings
+## attr WEB roomIcons Overview:status_comfort@green Aussen:status_away_1@yellow Wohnzimmer:scene_livingroom@yellow GZ:scene_livingroom@yellow Office_Laulau:scene_office@yellow Office_WPL:scene_office@yellow Galerie:light_floor_lamp@yellow Keller:control_building_kg@yellow DG:control_building_dg@yellow Batteriestatus:measure_battery_50 Homematic:hm_ccu Feuermelder:secur_smoke_detector Fahrtziele:it_i-net Alexa:alexa@blue Logging:icoLog System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
 attr WEB title FHEM-Goesing-Docker
 
 # Fake FileLog entry, to access the fhem log from FHEMWEB
@@ -46,7 +53,102 @@ attr DBLogging icon time_note
 attr DBLogging room Log
 define DBLogging_Reopen at +*00:15:00 set DBLogging reopen
 attr DBLogging_Reopen room Log
-# TestSwitch
+#########################################################################
+## Daemmerung, Twilight
+#########################################################################
+define Daemmerung Twilight 48.3141739 16.1782933 544523
+attr Daemmerung event-on-update-reading sr,ss
+attr Daemmerung icon weather_sunrise
+attr Daemmerung room System
+#########################################################################
+## Unwetterzentrale
+#########################################################################
+define Unwetterzentrale UWZ AT 00473 3600
+attr Unwetterzentrale download 1
+attr Unwetterzentrale group Umwelt
+attr Unwetterzentrale humanreadable 1
+attr Unwetterzentrale icon weather_storm
+attr Unwetterzentrale maps niederoesterreich
+attr Unwetterzentrale room Aussen
+#########################################################################
+## Unwetterzentrale-Details
+#########################################################################
+define UnwetterDetails weblink htmlCode {UWZAsHtml("Unwetterzentrale")}
+attr UnwetterDetails group Umwelt
+attr UnwetterDetails room Aussen
+
+define UnwetterKarteLand weblink htmlCode {UWZAsHtmlKarteLand("Unwetterzentrale","niederoesterreich")}
+attr UnwetterKarteLand room Aussen
+
+define UnwetterKarteMovie weblink htmlCode {UWZAsHtmlMovie("Unwetterzentrale","niederschlag-wolken-at")}
+attr UnwetterKarteMovie room Aussen
+
+
+########################################################################
+## readngsGroup:
+## Daemmerung:<%hourglass>,<Dauer>,duration Daemmerung:<%it_i-net>,<Distanz>,distance Daemmerung:<%car>,<ETA>,eta
+##
+## Daemmerung                --> Device
+## <%weather_cloudy_light>   --> Icon
+## <Sonnenuntergang:>        --> Textinhalt "Sonnenuntergang:"
+## sr                        --> Readingname
+## <br>                      --> Zeilenumbruch
+##
+#########################################################################
+define rg_Daemmerung readingsGroup Daemmerung:<%weather_sunrise>,<Sonnenaufgang:>,sr Daemmerung:<%weather_sunset>,<Sonnenuntergang:>,ss
+attr rg_Daemmerung alias Dämmerung:
+attr rg_Daemmerung group Umwelt
+attr rg_Daemmerung room Aussen
+attr rg_Daemmerung valueFormat {"azimuth" => '%d °'}
+attr rg_Daemmerung valueStyle style="color:yellow;;text-align:right"
+
+
+#########################################################################
+## Wetter: Wolfpassing
+#########################################################################
+define Wolfpassing_Wetter Weather 544456 900 de
+attr Wolfpassing_Wetter event-on-update-reading condition,temperature,humidity,pressure,pressure_trend_txt,wind_condition,wind_direction,visibility
+attr Wolfpassing_Wetter icon weather_cloudy_light
+attr Wolfpassing_Wetter room System
+
+
+#########################################################################
+## readngsGroup:
+## Wolfpassing_Wetter:<%hourglass>,<Dauer>,duration 01_Home2Office:<%it_i-net>,<Distanz>,distance 01_Home2Office:<%car>,<ETA>,eta
+##
+## Wolfpassing_Wetter        --> Device
+## <%weather_cloudy_light>   --> Icon
+## <Ort: >                   --> Textinhalt "Ort: "
+## temperature               --> Readingname
+## <br>                      --> Zeilenumbruch
+##
+## attr rg_Car_Office sortby 1 --> Anzeige beginnt mit rg_Car_Office
+#########################################################################
+define rg_Wolfpassing_Wetter readingsGroup Wolfpassing_Wetter:<%it_i-net>,<Ort:>,city\
+Wolfpassing_Wetter:<%refresh>,<aktualisiert:>,<{ReadingsTimestamp("Wolfpassing_Wetter","city","")}>\
+Wolfpassing_Wetter:<%weather_cloudy_light>,<Zustand:>,condition\
+Wolfpassing_Wetter:<%temp_temperature>,<Temperatur:>,temperature Wolfpassing_Wetter:<%weather_humidity>,<Luftfeuchtigkeit:>,humidity\
+Wolfpassing_Wetter:<%weather_barometric_pressure>,<Luftdruck:>,pressure Wolfpassing_Wetter:<%weather_barometric_pressure>,<Trend:>,pressure_trend_txt\
+Wolfpassing_Wetter:<%weather_wind_speed>,<Wind:>,wind_condition Wolfpassing_Wetter:<%weather_directions>,<Windrichtung:>,wind_direction\
+Wolfpassing_Wetter:<%weather_cloudy_light>,<Sicht:>,visibility
+attr rg_Wolfpassing_Wetter alias Wetter:
+attr rg_Wolfpassing_Wetter group Umwelt
+attr rg_Wolfpassing_Wetter mapping {ReadingsTimestamp("Wolfpassing_Wetter","city","")} Wolfpassing_Wetter:<%weather_cloudy_light>,<Zustand:>,condition Wolfpassing_Wetter:<%temp_temperature>,<Temperatur:>,temperature Wolfpassing_Wetter:<%weather_humidity>,<Luftfeuchtigkeit:>,humidity Wolfpassing_Wetter:<%weather_barometric_pressure>,<Luftdruck:>,pressure Wolfpassing_Wetter:<%weather_barometric_pressure>,<Trend:>,pressure_trend_txt Wolfpassing_Wetter:<%weather_wind_speed>,<Wind:>,wind_condition Wolfpassing_Wetter:<%weather_wind>,<Windrichtung:>,wind_direction Wolfpassing_Wetter:<%weather_cloudy_light>,<Sicht:>,visibility
+attr rg_Wolfpassing_Wetter room Aussen
+attr rg_Wolfpassing_Wetter valueFormat {"temperature" => '%.1f °C', "humidity" => '%d %', "pressure" => '%d hPa', "wind_direction" => '%d °', "visibility" => '%d km' }
+attr rg_Wolfpassing_Wetter valueStyle style="color:yellow;;text-align:right"
+
+
+#########################################################################
+## Wetter: Weblink Wolfpassing
+#########################################################################
+define weblink_Wolfpassing_Wetter weblink htmlCode { "Wolfpassing: <br>".WeatherAsHtml("Wolfpassing_Wetter",7)}
+attr weblink_Wolfpassing_Wetter room Aussen
+
+
+############################################
+## TestSwitch
+############################################
 define testSwitch dummy
 attr testSwitch genericDeviceType switch
 attr testSwitch room Homekit
