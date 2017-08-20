@@ -36,8 +36,16 @@
 
 Since all data in the container is static, you have to delete the container and recreate it to update fhem.
 
-## Errorhandling
+## Error handling
 - ERROR: for fhem  no such image:
 - ERROR: Encountered errors while bringing up the project
 - docker-compose rm then docker-compose up -d --> fixes the issue
+
+## Portainer
+- Alle Container können komfortabel über die Portainer-Oberfläche verwaltet werden
+- portainer.io
+- docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+- docker run -d -p 9000:9000 portainer/portainer
+- You'll just need to access the port 9000 of the Docker engine where portainer is running using your browser. 
+- http://172.16.109.1:9000 or http://192.168.1.1:9000/fhem
 
