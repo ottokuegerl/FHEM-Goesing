@@ -41,6 +41,10 @@ Since all data in the container is static, you have to delete the container and 
 - ERROR: Encountered errors while bringing up the project
 - docker-compose rm then docker-compose up -d --> fixes the issue
 
+## Modification within the container
+- docker exec -ti <container_name> bash
+  root@8132f255517a:/var/www/html# apt-get install curl
+
 ## Portainer
 - Alle Container können komfortabel über die Portainer-Oberfläche verwaltet werden
 - docker pull portainer/portainer
