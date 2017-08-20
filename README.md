@@ -51,5 +51,5 @@ Since all data in the container is static, you have to delete the container and 
 - docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 - docker run -d -p 9000:9000 portainer/portainer
 - You'll just need to access the port 9000 of the Docker engine where portainer is running using your browser. 
-- http://172.16.109.1:9000 or http://192.168.1.1:9000/fhem
+- http://172.16.109.1:9000 or http://192.168.1.1:9000
 
