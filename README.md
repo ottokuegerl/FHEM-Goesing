@@ -35,3 +35,9 @@
 ## Updating FHEM
 
 Since all data in the container is static, you have to delete the container and recreate it to update fhem.
+
+## Errorhandling
+- ERROR: for fhem  no such image:
+- ERROR: Encountered errors while bringing up the project
+- docker-compose rm then docker-compose up -d --> fixes the issue as
+
