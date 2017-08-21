@@ -28,7 +28,7 @@ attr WEB icon it_i-net
 attr WEB plotWeekStartDay 1
 attr WEB menuEntries Update,cmd=update,UpdateCheck,cmd=update+check,Restart,cmd=shutdown+restart
 attr WEB room System
-attr WEB roomIcons Aussen:status_away_1@yellow Homekit:audio_audio Log:edit_paste System:it_network Save.config:message_attention Everything:it_i-net Unsorted:unknown Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
+attr WEB roomIcons Aussen:status_away_1@yellow Homekit:audio_audio Log:edit_paste System:it_network Security:secur_locked Save.config:message_attention Everything:it_i-net Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
 attr WEB title FHEM-Goesing-Docker
 
 # Fake FileLog entry, to access the fhem log from FHEMWEB
@@ -82,7 +82,6 @@ attr UnwetterKarteLand room Aussen
 define UnwetterKarteMovie weblink htmlCode {UWZAsHtmlMovie("Unwetterzentrale","niederschlag-wolken-at")}
 attr UnwetterKarteMovie room Aussen
 
-
 ########################################################################
 ## readngsGroup:
 ## Daemmerung:<%hourglass>,<Dauer>,duration Daemmerung:<%it_i-net>,<Distanz>,distance Daemmerung:<%car>,<ETA>,eta
@@ -101,7 +100,6 @@ attr rg_Daemmerung room Aussen
 attr rg_Daemmerung valueFormat {"azimuth" => '%d °'}
 attr rg_Daemmerung valueStyle style="color:yellow;;text-align:right"
 
-
 #########################################################################
 ## Wetter: Wolfpassing
 #########################################################################
@@ -109,7 +107,6 @@ define Wolfpassing_Wetter Weather 544456 900 de
 attr Wolfpassing_Wetter event-on-update-reading condition,temperature,humidity,pressure,pressure_trend_txt,wind_condition,wind_direction,visibility
 attr Wolfpassing_Wetter icon weather_cloudy_light
 attr Wolfpassing_Wetter room System
-
 
 #########################################################################
 ## readngsGroup:
@@ -137,13 +134,11 @@ attr rg_Wolfpassing_Wetter room Aussen
 attr rg_Wolfpassing_Wetter valueFormat {"temperature" => '%.1f °C', "humidity" => '%d %', "pressure" => '%d hPa', "wind_direction" => '%d °', "visibility" => '%d km' }
 attr rg_Wolfpassing_Wetter valueStyle style="color:yellow;;text-align:right"
 
-
 #########################################################################
 ## Wetter: Weblink Wolfpassing
 #########################################################################
 define weblink_Wolfpassing_Wetter weblink htmlCode { "Wolfpassing: <br>".WeatherAsHtml("Wolfpassing_Wetter",7)}
 attr weblink_Wolfpassing_Wetter room Aussen
-
 
 ############################################
 ## TestSwitch
@@ -153,3 +148,10 @@ attr testSwitch genericDeviceType switch
 attr testSwitch room Homekit
 attr testSwitch setList on off
 attr testSwitch webCmd on:off
+
+############################################
+## GoogleAuth
+############################################
+define GoogleAuth GoogleAuth
+attr GoogleAuth icon secur_locked
+attr GoogleAuth room Security
