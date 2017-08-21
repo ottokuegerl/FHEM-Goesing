@@ -1,34 +1,34 @@
 attr global userattr DbLogExclude DbLogInclude cmdIcon devStateIcon devStateStyle genericDeviceType:security,ignore,switch,outlet,light,blind,thermometer,thermostat,contact,garage,window,lock homebridgeMapping:textField-long icon sortby webCmd widgetOverride
 attr global autoload_undefined_devices 1
 attr global icon it_network
+attr global latitude 48.314129
 attr global logfile -
+attr global longitude 16.180329
 attr global modpath .
 attr global motd none
+attr global nofork 1
+attr global perlSyntaxCheck 1
 attr global room System
 attr global sendStatistics onUpdate
 attr global statefile ./log/fhem.save
 attr global updateInBackground 0
 attr global verbose 2
-attr global nofork 1
-attr global perlSyntaxCheck 1
 #########################################################################
 ## Geo-Location: Aehrengasse 6, 3424 Wolfpassing
 #########################################################################
-attr global latitude 48.314129
-attr global longitude 16.180329
 
 define telnetPort telnet 7072 global
 attr telnetPort room System
 
 define WEB FHEMWEB 8083 global
-attr WEB CssFiles hausautomatisierung-com/styles.css
 attr WEB JavaScripts codemirror/fhem_codemirror.js
 attr WEB editConfig 1
 attr WEB icon it_i-net
-attr WEB plotWeekStartDay 1
 attr WEB menuEntries Update,cmd=update,UpdateCheck,cmd=update+check,Restart,cmd=shutdown+restart
+attr WEB plotWeekStartDay 1
 attr WEB room System
 attr WEB roomIcons Aussen:status_away_1@yellow Homekit:audio_audio Log:edit_paste System:it_network Security:secur_locked Save.config:message_attention Everything:it_i-net Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
+attr WEB stylesheetPrefix dark
 attr WEB title FHEM-Goesing-Docker
 
 # Fake FileLog entry, to access the fhem log from FHEMWEB
