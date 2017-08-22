@@ -2,7 +2,6 @@
 
 set -e
 cd /opt/fhem
-sh ./opt/fhem/cpid.sh
 port=7072
 
 echo "Starte FHEM"
