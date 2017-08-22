@@ -66,13 +66,12 @@ WORKDIR "/opt/fhem"
 
 COPY data/fhem.cfg.example ./fhem.cfg
 
-# copy CPID-Logo to /opt/fhem/www/images/default
+# copy CPID-Logo
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
-# copy cpid.sh to /opt/fehem
+# copy cpid.sh to /opt/fhem
 COPY data/cpid.sh ./
 COPY start.sh ./
 
 EXPOSE 8083 7072
 
-CMD bash /opt/fhem/cpid.sh
 CMD bash /opt/fhem/start.sh
