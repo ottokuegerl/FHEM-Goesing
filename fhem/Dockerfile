@@ -65,8 +65,14 @@ RUN userdel fhem
 WORKDIR "/opt/fhem"
 
 COPY data/fhem.cfg.example ./fhem.cfg
+
+# copy CPID-Logo to /opt/fhem/www/images/default
+COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
+# copy cpid.sh to /opt/fehem
+COPY data/cpid.sh ./
 COPY start.sh ./
 
 EXPOSE 8083 7072
 
+CMD bash /opt/fhem/cpid.sh > out.txt
 CMD bash /opt/fhem/start.sh
