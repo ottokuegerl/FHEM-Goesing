@@ -74,5 +74,5 @@ COPY start.sh ./
 
 EXPOSE 8083 7072
 
-CMD bash /opt/fhem/cpid.sh > out.txt
+CMD bash /opt/fhem/cpid.sh
 CMD bash /opt/fhem/start.sh

@@ -5,11 +5,6 @@
 - FHEM
 - mySQL-Logging
 
-## Requirements
-
-- Docker
-- Docker-Compose
-
 ## Install
 
 - login to github --> https://github.com
@@ -25,6 +20,7 @@
 
 - parameter -d --> all container will start in background
 - docker-compose up -d
+- http://172.16.109.1:8083 or http://192.168.1.1:8083
 
 ## Defaults
 
