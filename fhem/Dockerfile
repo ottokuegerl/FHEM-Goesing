@@ -22,7 +22,9 @@ vim \
 telnet \
 usbutils \
 sqlite3 \
-mc
+mc \
+htop \
+net-tools
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
