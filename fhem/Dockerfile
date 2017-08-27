@@ -58,12 +58,13 @@ libconvert-base32-perl \
 libauthen-oath-perl \
 libcrypt-urandom-perl
 
-# Install fhem
+# Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
 
 RUN wget https://fhem.de/fhem-${FHEM_VERSION}.deb && dpkg -i fhem-${FHEM_VERSION}.deb
 RUN userdel fhem
 
+# working directory within container
 WORKDIR "/opt/fhem"
 
 COPY data/fhem.cfg.example ./fhem.cfg

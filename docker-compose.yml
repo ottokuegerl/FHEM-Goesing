@@ -12,6 +12,8 @@ services:
        devices:
                - "/dev/ttyUSB0:/dev/ttyUSB0"
        volumes:
+               # path on the host:path within container
+               # ./fhem/start.sh --> /home/intel-nuc/docker/FHEM-Goesing/fhem/start.sh
                - ./fhem/start.sh:/opt/fhem/start.sh
                - ./fhem/log/:/opt/fhem/log
                - ./fhem/backup/:/opt/fhem/backup
