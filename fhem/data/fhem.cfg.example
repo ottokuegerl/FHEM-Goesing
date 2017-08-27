@@ -238,4 +238,63 @@ attr rg_Car_Knfd sortby 4
 attr rg_Car_Knfd valueStyle style="color:yellow;;text-align:right"
 
 #########################################################################
+## Synology: MIB of interests
+## disk status: 1.3.6.1.4.1.6574.2.1.1.5
+## Normal(1): The hard disk functions normally. Initialized(2): The hard disk has system partition but no data. NotInitialized(3):	The hard disk does not have system in system partition. SystemPartitionFailed(4): The system partitions on the hard disks are damaged. Crashed(5): The hard disk has damaged. 
+## disk temperature: 1.3.6.1.4.1.6574.2.1.1.6
+## system status: 1.3.6.1.4.1.6574.1.1.0
+## Normal(1): System functionals normally. Failed(2): Volume has crashed. 
+## system temperature: 1.3.6.1.4.1.6574.1.2.0
+## system power status: 1.3.6.1.4.1.6574.1.3.0
+## Normal(1): All power supplies functional normally. Failed(2): One of power supply has failed.
+## dsm name: 1.3.6.1.4.1.6574.1.5.1.0
+## The Model name of this NAS
+## dsm version: 1.3.6.1.4.1.6574.1.5.3.0
+## The version of this NAS
+## dsm upgrade available: 1.3.6.1.4.1.6574.1.5.4.0
+## Available(1): There is version ready for download. Unavailable(2): The DSM is latest version. Connecting(3): Checking for the latest DSM. Disconnected(4): Failed to connect to server. Others(5): If DSM is upgrading or downloading, the status will show others.
+#########################################################################
+define Synology SYSSTAT 60 600 192.168.1.100
+attr Synology event-on-change-reading .*
+attr Synology mibs .1.3.6.1.4.1.6574.2.1.1.6.0:temp_hdd1 ,.1.3.6.1.4.1.6574.2.1.1.6.1:temp_hdd2 ,.1.3.6.1.4.1.6574.2.1.1.6.2:temp_hdd3\
+,.1.3.6.1.4.1.6574.2.1.1.6.3:temp_hdd4 ,.1.3.6.1.4.1.6574.2.1.1.6.4:temp_hdd5 ,.1.3.6.1.4.1.6574.2.1.1.5.0:state_hdd1\
+,.1.3.6.1.4.1.6574.2.1.1.5.1:state_hdd2 ,.1.3.6.1.4.1.6574.2.1.1.5.2:state_hdd3 ,.1.3.6.1.4.1.6574.2.1.1.5.3:state_hdd4\
+,.1.3.6.1.4.1.6574.2.1.1.5.4:state_hdd5 ,.1.3.6.1.4.1.6574.1.5.1.0:dsm_name ,.1.3.6.1.4.1.6574.1.5.3.0:dsm_ver\
+,.1.3.6.1.4.1.6574.1.5.4.0:dsm_upgrade
+attr Synology room System
+attr Synology snmp 1
+attr Synology snmpCommunity synology
+attr Synology snmpVersion 2
+attr Synology stateFormat temperature °C
+attr Synology synologytemperature 1
+attr Synology uptime 1
 
+
+#########################################################################
+## readingsGroup:
+## rg_Synology readingsGroup Synology:<%humidity>,<Temperatur:>,temp_hdd1
+##
+## Synology                        --> Device
+## <%humidity>                     --> Icon
+## <Temperatur:>                   --> Textinhalt "Temperatur:"
+## temp_hdd1                       --> Readingname
+## nameStyle style="color:yellow"  --> Textfarbe "gelb"
+## valueStyle style="color:yellow" --> Readingwerte "gelb"
+##
+#########################################################################
+define rg_Synology readingsGroup Synology:<%rc_INFO2>,<Synology:>,dsm_name,dsm_ver\
+Synology:<%rc_INFO2>,<Upgrade_available_(1=yes):>,dsm_upgrade\
+Synology:<%temp_temperature>,<Temperatur:>,temperature Synology:<%temp_temperature>,<Disk_1_Temperatur:>,temp_hdd1\
+Synology:<%temp_temperature>,<Disk_2_Temperatur:>,temp_hdd2 Synology:<%temp_temperature>,<Disk_3_Temperatur:>,temp_hdd3\
+Synology:<%temp_temperature>,<Disk_4_Temperatur:>,temp_hdd4 Synology:<%temp_temperature>,<Disk_5_Temperatur:>,temp_hdd5\
+Synology:<%rc_INFO2>,<Disk_1_Status_(1=ok):>,state_hdd1 Synology:<%rc_INFO2>,<Disk_2_Status_(1=ok):>,state_hdd2\
+Synology:<%rc_INFO2>,<Disk_3_Status_(1=ok):>,state_hdd3 Synology:<%rc_INFO2>,<Disk_4_Status_(1=ok):>,state_hdd4\
+Synology:<%rc_INFO2>,<Disk_5_Status_(1=ok):>,state_hdd5
+attr rg_Synology alias Synology:
+attr rg_Synology icon humidity
+attr rg_Synology room Keller
+attr rg_Synology valueFormat {"temperature" => '%d °C', "temp_hdd1" => '%d °C', "temp_hdd2" => '%d °C', "temp_hdd3" => '%d °C', "temp_hdd4" => '%d °C', "temp_hdd5" => '%d °C'}
+attr rg_Synology valueStyle style="color:yellow;;text-align:right"
+
+#########################################################################
+## EOF
