@@ -56,7 +56,8 @@ libdbd-sqlite3-perl \
 libtext-diff-perl \
 libconvert-base32-perl \
 libauthen-oath-perl \
-libcrypt-urandom-perl
+libcrypt-urandom-perl \
+libnet-snmp-perl
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
