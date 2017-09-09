@@ -18,7 +18,7 @@ attr global verbose 2
 ## Geo-Location: Aehrengasse 6, 3424 Wolfpassing
 #########################################################################
 
-include /opt/fhem/mycfg/00_config.cfg
+include /opt/fhem/mycfg/04_traffic.cfg
 
 
 define telnetPort telnet 7072 global
