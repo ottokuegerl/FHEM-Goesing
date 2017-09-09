@@ -70,7 +70,8 @@ WORKDIR "/opt/fhem"
 
 COPY data/fhem.cfg.example ./fhem.cfg
 # copy MYCFG-files to WORKDIR
-COPY data/mycfg/ ./
+# COPY data/mycfg/ ./
+# COPY data/mycfg/ ./mycfg/
 
 # copy CPID-Logo
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
