@@ -69,12 +69,12 @@ RUN userdel fhem
 WORKDIR "/opt/fhem"
 
 COPY data/fhem.cfg.example ./fhem.cfg
+# copy MYCFG-files
+COPY data/abc.txt ./abc.txt
 
 # copy CPID-Logo
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
 COPY start.sh ./
-# copy MYCFG-files
-COPY data/abc.txt /opt/fhem
 
 EXPOSE 8083 7072
 
