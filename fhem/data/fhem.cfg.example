@@ -18,7 +18,7 @@ attr global verbose 2
 ## Geo-Location: Aehrengasse 6, 3424 Wolfpassing
 #########################################################################
 
-include /opt/fhem/mycfg/04_traffic.cfg
+include /opt/fhem/mycfg/00_config.cfg
 
 
 define telnetPort telnet 7072 global
@@ -218,6 +218,94 @@ attr rg_Synology icon humidity
 attr rg_Synology room Keller
 attr rg_Synology valueFormat {"temperature" => '%d °C', "temp_hdd1" => '%d °C', "temp_hdd2" => '%d °C', "temp_hdd3" => '%d °C', "temp_hdd4" => '%d °C', "temp_hdd5" => '%d °C'}
 attr rg_Synology valueStyle style="color:yellow;;text-align:right"
+
+
+#########################################################################
+## 04_traffic.cfg
+## Stand.........: 20.10.2016
+## Zweck.........: Dieses Modul erfasst Fahrzeiten in aktueller Verkehrslage
+##                 mittels Google Maps Directions API. 
+## Besonderheiten:
+##
+#########################################################################
+
+
+define 01_Home2Office TRAFFIC AIzaSyCYoGYmj-oxYS6TWXznN7vHGX6WcP0_UAA 600
+attr 01_Home2Office userattr end_address icon outputReadings start_address verbose
+attr 01_Home2Office end_address Technologiestrasse 5, 1120
+attr 01_Home2Office icon car
+attr 01_Home2Office outputReadings text
+attr 01_Home2Office room System
+attr 01_Home2Office start_address Aehrengasse 6, 3424
+attr 01_Home2Office verbose 1
+
+define 02_Home2Wien TRAFFIC AIzaSyCYoGYmj-oxYS6TWXznN7vHGX6WcP0_UAA 600
+attr 02_Home2Wien userattr end_address icon outputReadings start_address verbose
+attr 02_Home2Wien end_address Franz-Josefs-Kai 10, 1010
+attr 02_Home2Wien icon car
+attr 02_Home2Wien outputReadings text
+attr 02_Home2Wien room System
+attr 02_Home2Wien start_address Aehrengasse 6, 3424
+attr 02_Home2Wien verbose 1
+
+define 03_Home2Tulln TRAFFIC AIzaSyCYoGYmj-oxYS6TWXznN7vHGX6WcP0_UAA 600
+attr 03_Home2Tulln userattr end_address icon outputReadings start_address verbose
+attr 03_Home2Tulln end_address Minoritenplatz 1, 3430
+attr 03_Home2Tulln icon car
+attr 03_Home2Tulln outputReadings text
+attr 03_Home2Tulln room System
+attr 03_Home2Tulln start_address Aehrengasse 6, 3424
+attr 03_Home2Tulln verbose 1
+
+define 04_Home2Knittelfeld TRAFFIC AIzaSyCYoGYmj-oxYS6TWXznN7vHGX6WcP0_UAA 600
+attr 04_Home2Knittelfeld userattr end_address icon outputReadings start_address verbose
+attr 04_Home2Knittelfeld end_address Karl-Morre-Gasse 3, 8720
+attr 04_Home2Knittelfeld icon car
+attr 04_Home2Knittelfeld outputReadings text
+attr 04_Home2Knittelfeld room System
+attr 04_Home2Knittelfeld start_address Aehrengasse 6, 3424
+attr 04_Home2Knittelfeld verbose 1
+
+
+#########################################################################
+## readngsGroup:
+## 01_Home2Office:<%hourglass>,<Dauer>,duration 01_Home2Office:<%it_i-net>,<Distanz>,distance 01_Home2Office:<%car>,<ETA>,eta
+##
+## 01_Home2Office --> Device
+## <%hourglass>   --> Icon
+## <Dauer>        --> Textinhalt "Dauer"
+## duration       --> Readingname
+## <br>           --> Zeilenumbruch
+##
+## attr rg_Car_Office sortby 1 --> Anzeige beginnt mit rg_Car_Office
+#########################################################################
+define rg_Car_Office readingsGroup 01_Home2Office:<%hourglass>,<Dauer>,duration 01_Home2Office:<%it_i-net>,<Distanz>,distance 01_Home2Office:<%car>,<ETA>,eta
+attr rg_Car_Office alias Home2Office
+attr rg_Car_Office group Ziele
+attr rg_Car_Office room Fahrtziele
+attr rg_Car_Office sortby 1
+attr rg_Car_Office valueStyle style="color:yellow;;text-align:right"
+
+define rg_Car_Wien readingsGroup 02_Home2Wien:<%hourglass>,<Dauer>,duration 02_Home2Wien:<%it_i-net>,<Distanz>,distance 02_Home2Wien:<%car>,<ETA>,eta
+attr rg_Car_Wien alias Home2Wien
+attr rg_Car_Wien group Ziele
+attr rg_Car_Wien room Fahrtziele
+attr rg_Car_Wien sortby 2
+attr rg_Car_Wien valueStyle style="color:yellow;;text-align:right"
+
+define rg_Car_Tulln readingsGroup 03_Home2Tulln:<%hourglass>,<Dauer>,duration 03_Home2Tulln:<%it_i-net>,<Distanz>,distance 03_Home2Tulln:<%car>,<ETA>,eta
+attr rg_Car_Tulln alias Home2Tulln
+attr rg_Car_Tulln group Ziele
+attr rg_Car_Tulln room Fahrtziele
+attr rg_Car_Tulln sortby 3
+attr rg_Car_Tulln valueStyle style="color:yellow;;text-align:right"
+
+define rg_Car_Knfd readingsGroup 04_Home2Knittelfeld:<%hourglass>,<Dauer>,duration 04_Home2Knittelfeld:<%it_i-net>,<Distanz>,distance 04_Home2Knittelfeld:<%car>,<ETA>,eta
+attr rg_Car_Knfd alias Home2Knittelfeld
+attr rg_Car_Knfd group Ziele
+attr rg_Car_Knfd room Fahrtziele
+attr rg_Car_Knfd sortby 4
+attr rg_Car_Knfd valueStyle style="color:yellow;;text-align:right"
 
 #########################################################################
 ## EOF
