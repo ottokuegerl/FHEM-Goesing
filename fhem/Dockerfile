@@ -73,6 +73,8 @@ COPY data/fhem.cfg.example ./fhem.cfg
 # copy CPID-Logo
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
 COPY start.sh ./
+# copy MYCFG-files
+COPY data/abc.txt /opt/fhem
 
 EXPOSE 8083 7072
 
