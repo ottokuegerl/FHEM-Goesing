@@ -39,7 +39,7 @@ Since all data in the container is static, you have to delete the container and 
 
 ## Modification within container
 - docker exec -ti <container_name> bash
-- root@8132f255517a:/var/www/html# apt-get install curl
+- root@f42651c7dc3a:/opt/fhem# apt-get install curl
 
 ## Portainer
 - Alle Container können komfortabel über die Portainer-Oberfläche verwaltet werden
