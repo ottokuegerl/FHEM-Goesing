@@ -308,4 +308,17 @@ attr rg_Car_Knfd sortby 4
 attr rg_Car_Knfd valueStyle style="color:yellow;;text-align:right"
 
 #########################################################################
+# Dreambox DM820 192.168.1.20
+#########################################################################
+define DM820 ENIGMA2 192.168.1.20
+attr DM820 bouquet-radio 1:7:2:0:0:0:0:0:0:0:FROM BOUQUET "userbouquet.favourites.radio" ORDER BY bouquet
+attr DM820 bouquet-tv 1:7:1:0:0:0:0:0:0:0:FROM BOUQUET "userbouquet.favourites.tv" ORDER BY bouquet
+attr DM820 devStateIcon on:rc_GREEN:off off:rc_YELLOW:on absent:rc_STOP:on
+attr DM820 event-on-update-reading channelList
+attr DM820 group Dreambox
+attr DM820 http-method GET
+attr DM820 icon dreambox
+attr DM820 model DM820
+attr DM820 room Wohnzimmer
+attr DM820 webCmd channel:input
 ## EOF
