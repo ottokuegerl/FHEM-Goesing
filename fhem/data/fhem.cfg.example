@@ -31,7 +31,7 @@ attr WEB icon it_i-net
 attr WEB menuEntries Update,cmd=update,UpdateCheck,cmd=update+check,Restart,cmd=shutdown+restart
 attr WEB plotWeekStartDay 1
 attr WEB room System
-attr WEB roomIcons Aussen:status_away_1@yellow Fahrtziele:it_i-net Homekit:audio_audio Log:edit_paste Keller:control_building_kg@yellow System:it_network Security:secur_locked Save.config:message_attention Everything:it_i-net Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings System:system_fhem System_Notify:icoMail Update:system_fhem_update@red Restart:system_fhem_reboot@red
+attr WEB roomIcons Aussen:status_away_1@yellow Fahrtziele:it_i-net Homekit:audio_audio Log:edit_paste Keller:control_building_kg@yellow System:it_network Security:secur_locked Save.config:message_attention Everything:it_i-net Commandref:system_fhem Remote.doc:message_mail Edit.files:edit_copy Select.style:edit_open Event.monitor:edit_settings System:system_fhem System_Notify:icoMail Update:system_fhem_update@red UpdateCheck:system_fhem_reboot@red Restart:system_fhem_reboot@red
 attr WEB stylesheetPrefix dark
 attr WEB title FHEM-Goesing-Docker
 
