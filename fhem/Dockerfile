@@ -61,11 +61,10 @@ liblist-moreutils-perl \
 libmail-imapclient-perl \
 libmail-sendmail-perl \
 libmime-base64-perl \
-libnet-snmp-perl \
 libnet-telnet-perl \
 libsoap-lite-perl \
-libsocket6-perl \
 libsocket-perl \
+libsocket6-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
 libterm-readkey-perl \
@@ -75,7 +74,6 @@ libtext-diff-perl \
 libtimedate-perl \
 libwww-perl \
 libxml-simple-perl
-
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
