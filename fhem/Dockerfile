@@ -50,7 +50,7 @@ libio-socket-ssl-perl \
 libjson-perl \
 libjson-xs-perl \
 libmail-sendmail-perl \
-libnet-snmp-perl
+libnet-snmp-perl \
 libsocket-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
@@ -58,7 +58,7 @@ libterm-readkey-perl \
 libterm-readline-perl-perl \
 libtext-diff-perl \
 libwww-perl \
-libxml-simple-perl \
+libxml-simple-perl
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
