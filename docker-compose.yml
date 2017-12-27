@@ -42,7 +42,7 @@ services:
        networks:
                - fhem-network
 
-networks:
+   networks:
        fhem-network:
        driver: bridge
 
