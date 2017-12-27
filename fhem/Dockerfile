@@ -32,13 +32,11 @@ RUN apt-get -y --force-yes install \
 libalgorithm-merge-perl \
 libauthen-oath-perl \
 libavahi-compat-libdnssd-dev \
-libcgi-pm-perl \
 libclass-dbi-mysql-perl \
 libclass-isa-perl \
 libcommon-sense-perl \
 libconvert-base32-perl \
 libcrypt-urandom-perl \
-libdata-dump-perl \
 libdatetime-format-strptime-perl \
 libdbd-sqlite3-perl \
 libdbi-perl \
@@ -47,33 +45,20 @@ libdpkg-perl \
 liberror-perl \
 libfile-copy-recursive-perl \
 libfile-fcntllock-perl \
-libgd-graph-perl \
-libgd-text-perl \
-libimage-info-perl \
-libimage-librsvg-perl \
-libio-socket-inet6-perl \
 libio-socket-ip-perl \
-libio-socket-multicast-perl \
 libio-socket-ssl-perl \
 libjson-perl \
 libjson-xs-perl \
-liblist-moreutils-perl \
-libmail-imapclient-perl \
 libmail-sendmail-perl \
-libmime-base64-perl \
-libnet-telnet-perl \
-libsoap-lite-perl \
+libnet-snmp-perl
 libsocket-perl \
-libsocket6-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
 libterm-readkey-perl \
 libterm-readline-perl-perl \
-libtext-csv-perl \
 libtext-diff-perl \
-libtimedate-perl \
 libwww-perl \
-libxml-simple-perl
+libxml-simple-perl \
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
