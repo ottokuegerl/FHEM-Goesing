@@ -1,7 +1,6 @@
 version: "2"
 services:
    fhem:
-       restart: always
        expose:
                - "8083"
                - "7072"
@@ -10,6 +9,8 @@ services:
                - "7072:7072"
        build: fhem
        privileged: true
+       devices:
+               - "/dev/ttyUSB0:/dev/ttyUSB0"
        volumes:
                # path on the host:path within container
                # ./fhem/start.sh --> /home/intel-nuc/docker/FHEM-Goesing/fhem/start.sh
@@ -20,13 +21,11 @@ services:
                - ./fhem/data/FHEM/controls.txt:/opt/fhem/FHEM/controls.txt
                - ./fhem/data/FHEM/99_myUtils.pm:/opt/fhem/FHEM/99_myUtils.pm
                - ./fhem/data/contrib/dblog/db.conf:/opt/fhem/contrib/dblog/db.conf
-       networks:
-               - fhem-network
+
        depends_on:
                - "mysql"
 
    mysql:
-       restart: always
        expose:
                - "3306"
                - "33060"
@@ -39,10 +38,4 @@ services:
                - ./mysql/data:/var/lib/mysql
        environment:
                - MYSQL_RANDOM_ROOT_PASSWORD=yes
-       networks:
-               - fhem-network
-
-networks:
-       fhem-network:
-       driver: bridge
 
