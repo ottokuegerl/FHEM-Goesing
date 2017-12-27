@@ -27,6 +27,8 @@ usbutils \
 vim \
 wget
 
+RUN apt-get autoclean -y --force-yes && apt-get autoremove -y --force-yes
+
 # Install perl packages
 RUN apt-get -y --force-yes install \
 libalgorithm-merge-perl \
@@ -59,6 +61,8 @@ libterm-readline-perl-perl \
 libtext-diff-perl \
 libwww-perl \
 libxml-simple-perl
+
+RUN apt-get autoclean -y --force-yes && apt-get autoremove -y --force-yes
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
