@@ -9,55 +9,73 @@ ENV TERM xterm
 # Install dependencies
 RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends apt-utils
 RUN apt-get -y --force-yes install \
-perl \
-wget \
-git \
 apt-transport-https \
-sudo etherwake \
-dfu-programmer \
 build-essential \
-snmpd \
+dfu-programmer \
+etherwake \
+git \
+htop \
+mc \
+net-tools \
+perl \
 snmp \
-vim \
+snmpd \
+sqlite3 \
+sudo \
 telnet \
 usbutils \
-sqlite3 \
-mc \
-htop \
-net-tools
+vim \
+wget
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
-libavahi-compat-libdnssd-dev \
 libalgorithm-merge-perl \
+libauthen-oath-perl \
+libavahi-compat-libdnssd-dev \
+libcgi-pm-perl \
 libclass-dbi-mysql-perl \
 libclass-isa-perl \
 libcommon-sense-perl \
+libconvert-base32-perl \
+libcrypt-urandom-perl \
+libdata-dump-perl \
 libdatetime-format-strptime-perl \
+libdbd-sqlite3-perl \
 libdbi-perl \
 libdevice-serialport-perl \
 libdpkg-perl \
 liberror-perl \
 libfile-copy-recursive-perl \
 libfile-fcntllock-perl \
+libgd-graph-perl \
+libgd-text-perl \
+libimage-info-perl \
+libimage-librsvg-perl \
+libio-socket-inet6-perl \
 libio-socket-ip-perl \
+libio-socket-multicast-perl \
 libio-socket-ssl-perl \
 libjson-perl \
 libjson-xs-perl \
+liblist-moreutils-perl \
+libmail-imapclient-perl \
 libmail-sendmail-perl \
+libmime-base64-perl \
+libnet-snmp-perl \
+libnet-telnet-perl \
+libsoap-lite-perl \
+libsocket6-perl \
 libsocket-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
 libterm-readkey-perl \
 libterm-readline-perl-perl \
-libwww-perl \
-libxml-simple-perl \
-libdbd-sqlite3-perl \
+libtext-csv-perl \
 libtext-diff-perl \
-libconvert-base32-perl \
-libauthen-oath-perl \
-libcrypt-urandom-perl \
-libnet-snmp-perl
+libtimedate-perl \
+libwww-perl \
+libxml-simple-perl
+
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
