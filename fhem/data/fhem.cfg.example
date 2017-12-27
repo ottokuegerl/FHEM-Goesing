@@ -26,6 +26,10 @@ attr telnetPort room System
 
 define WEB FHEMWEB 8083 global
 attr WEB JavaScripts codemirror/fhem_codemirror.js
+attr WEB alias WEB (8083)
+attr WEB codemirrorParam { "lineWrapping": true, "height": "auto" }
+attr WEB confirmDelete 0
+attr WEB confirmJSError 0
 attr WEB editConfig 1
 attr WEB icon it_i-net
 attr WEB menuEntries Update,cmd=update,UpdateCheck,cmd=update+check,Restart,cmd=shutdown+restart
