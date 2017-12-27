@@ -1,4 +1,9 @@
 version: "2"
+
+networks:
+   fhem-network:
+       driver: bridge
+
 services:
    fhem:
        restart: always
@@ -42,7 +47,4 @@ services:
        networks:
                - fhem-network
 
-   networks:
-       fhem-network:
-       driver: bridge
 
