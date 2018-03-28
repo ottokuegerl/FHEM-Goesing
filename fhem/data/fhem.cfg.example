@@ -157,6 +157,14 @@ attr testSwitch room Homekit
 attr testSwitch setList on off
 attr testSwitch webCmd on:off
 
+define sms_btn dummy
+attr sms_btn alias SMS
+attr sms_btn setList state:Laulau,Werner_priv,Werner_office
+attr sms_btn readingList state
+attr sms_btn webCmd state
+attr sms_btn devStateIcon Laulau:message_mail@green
+attr sms_btn room Homekit
+
 ############################################
 ## GoogleAuth
 ############################################
