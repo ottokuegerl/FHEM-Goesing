@@ -38,7 +38,8 @@ Since all data in the container is static, you have to delete the container and 
 - docker-compose rm then docker-compose up -d --> fixes the issue
 
 ## Modification within container
-- docker exec -ti <container_name> bash
+- docker ps --> see container id
+- docker exec -ti <container_id> bash
 - root@f42651c7dc3a:/opt/fhem# apt-get install curl
 
 ## Portainer
