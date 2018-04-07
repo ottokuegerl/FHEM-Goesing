@@ -162,7 +162,7 @@ attr sms_btn alias SMS
 attr sms_btn setList state:Laulau,Werner_priv,Werner_office
 attr sms_btn readingList state
 attr sms_btn webCmd state
-attr sms_btn devStateIcon Laulau:message_mail@green,Werner_office:message_mail@yellow
+attr sms_btn devStateIcon Laulau:message_mail@green Werner_office:message_mail@yellow Werner_priv:message_mail@yellow
 attr sms_btn room Homekit
 
 ############################################
