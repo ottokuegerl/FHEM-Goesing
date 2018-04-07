@@ -162,15 +162,15 @@ attr sms_btn alias SMS
 attr sms_btn setList state:Laulau,Werner_priv,Werner_office
 attr sms_btn readingList state
 attr sms_btn webCmd state
-attr sms_btn devStateIcon Laulau:message_mail@green
+attr sms_btn devStateIcon Laulau:message_mail@green,Werner_office:message_mail@yellow
 attr sms_btn room Homekit
 
 ############################################
 ## DOIF 
 ############################################
 define dif_sms_btn DOIF ([sms_btn:state] eq "Laulau") (set testSwitch on) {Log 2,"Laulau --> FHEM-Server SMS sent"}\
-DOELSEIF ([sms_btn:state] eq "Werner_office") (set testSwitch on) {Log 2,"Werner-Office --> FHEM-Server SMS sent"}\
-DOELSEIF ([sms_btn:state] eq "Werner_priv") (set testSwitch on) {Log 2,"Werner-Priv --> FHEM-Server SMS sent"}
+DOELSEIF ([sms_btn:state] eq "Werner_office") (set testSwitch on)\
+DOELSEIF ([sms_btn:state] eq "Werner_priv") (set testSwitch on)
 attr dif_sms_btn room Homekit
 
 ############################################
