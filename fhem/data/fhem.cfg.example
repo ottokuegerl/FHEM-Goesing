@@ -168,7 +168,7 @@ attr sms_btn room Homekit
 ############################################
 ## DOIF 
 ############################################
-define dif_sms_btn DOIF ([sms_btn:state] eq "Laulau") (set testSwitch on) {Log 2,"Laulau --> FHEM-Server SMS sent"}\
+define dif_sms_btn DOIF ([sms_btn:state] eq "Laulau") (set testSwitch on)\
 DOELSEIF ([sms_btn:state] eq "Werner_office") (set testSwitch on)\
 DOELSEIF ([sms_btn:state] eq "Werner_priv") (set testSwitch on)
 attr dif_sms_btn room Homekit
