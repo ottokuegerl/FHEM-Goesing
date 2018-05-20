@@ -149,7 +149,7 @@ define weblink_Wolfpassing_Wetter weblink htmlCode { "Wolfpassing: <br>".Weather
 attr weblink_Wolfpassing_Wetter room Aussen
 
 ############################################
-## TestSwitch
+## TestSwitch test
 ############################################
 define testSwitch dummy
 attr testSwitch genericDeviceType switch
