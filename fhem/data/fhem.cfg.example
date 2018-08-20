@@ -165,6 +165,12 @@ attr sms_btn webCmd state
 attr sms_btn devStateIcon Laulau:message_mail@green Werner_office:message_mail@yellow Werner_priv:message_mail@yellow
 attr sms_btn room Homekit
 
+define testWPL dummy
+attr testWPL genericDeviceType switch
+attr testWPL room Homekit
+attr testWPL setList on off
+attr testWPL webCmd on:off
+
 ############################################
 ## DOIF 
 ############################################
