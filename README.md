@@ -9,7 +9,7 @@
 
 - login to github --> https://github.com
 - source: /home/intel-nuc/github/FHEM-Goesing
-- (git status git add . git commit -m "modified fhem.cfg.example" git push
+- git status --> git add . --> git commit -m "modified fhem.cfg.example" --> git push
 - clone repository to local system
 - cd /home/intel-nuc/docker
 - git clone https://github.com/ottokuegerl/FHEM-Goesing.git
