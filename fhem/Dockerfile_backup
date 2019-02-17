@@ -2,7 +2,7 @@ FROM debian:jessie
 
 MAINTAINER Otto KUEGERL
 
-ENV FHEM_VERSION 5.9
+ENV FHEM_VERSION 5.8
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
@@ -29,47 +29,36 @@ nano
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
-libalgorithm-merge-perl \
 libavahi-compat-libdnssd-dev \
+libalgorithm-merge-perl \
 libclass-dbi-mysql-perl \
 libclass-isa-perl \
 libcommon-sense-perl \
 libdatetime-format-strptime-perl \
-libdbd-sqlite3-perl libdbi-perl \
+libdbi-perl \
 libdevice-serialport-perl \
 libdpkg-perl \
 liberror-perl \
 libfile-copy-recursive-perl \
 libfile-fcntllock-perl \
 libio-socket-ip-perl \
-libio-socket-multicast-perl \
 libio-socket-ssl-perl \
 libjson-perl \
 libjson-xs-perl \
 libmail-sendmail-perl \
-libnet-telnet-perl \
-libsoap-lite-perl \
 libsocket-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
 libterm-readkey-perl \
 libterm-readline-perl-perl \
-libtext-diff-perl \
 libwww-perl \
 libxml-simple-perl \
-libcgi-pm-perl \
-libtimedate-perl \
-libmail-imapclient-perl \
-libgd-graph-perl \
-libtext-csv-perl \
-liblist-moreutils-perl \
-ttf-liberation \
-libimage-librsvg-perl \
-libgd-text-perl \
-libsocket6-perl \
-libio-socket-inet6-perl \
-libmime-base64-perl \
-libimage-info-perl
+libdbd-sqlite3-perl \
+libtext-diff-perl \
+libconvert-base32-perl \
+libauthen-oath-perl \
+libcrypt-urandom-perl \
+libnet-snmp-perl
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
