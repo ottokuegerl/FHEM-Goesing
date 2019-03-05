@@ -7,11 +7,12 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 # Install dependencies
-RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends apt-utils
+RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends
 RUN apt-get -y --force-yes install \
 perl \
 wget \
 git \
+apt-utils \
 apt-transport-https \
 sudo etherwake \
 dfu-programmer \
@@ -25,7 +26,8 @@ sqlite3 \
 mc \
 htop \
 net-tools \
-nano
+nano \
+sendemail
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
