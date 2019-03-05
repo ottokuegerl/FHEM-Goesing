@@ -8,10 +8,10 @@
 ## Install
 
 - login to github --> https://github.com
-- source: /home/intel-nuc/github/FHEM-Goesing
+- source: /home/nuc8/github/FHEM-Goesing
 - git status --> git add . --> git commit -m "modified fhem.cfg.example" --> git push
 - clone repository to local system
-- cd /home/intel-nuc/docker
+- cd /home/nuc8/docker
 - git clone https://github.com/ottokuegerl/FHEM-Goesing.git
 - cd FHEM-Goesing
 - cp ./fhem/data/fhem.cfg.example ./fhem/data/fhem.cfg
@@ -50,5 +50,5 @@ Since all data in the container is static, you have to delete the container and 
 - docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 - docker run -d -p 9000:9000 portainer/portainer
 - You'll just need to access the port 9000 of the Docker engine where portainer is running using your browser. 
-- http://172.16.109.1:9000 or http://192.168.1.1:9000
+- http://172.16.109.1:9000 or http://192.168.1.8:9000
 
