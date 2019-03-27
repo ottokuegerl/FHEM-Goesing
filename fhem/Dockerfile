@@ -92,6 +92,6 @@ COPY data/mycfg/ ./mycfg/
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
 COPY start.sh ./
 
-EXPOSE 8083 7072 8090
+EXPOSE 8083
 
 CMD bash /opt/fhem/start.sh

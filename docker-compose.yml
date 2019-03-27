@@ -9,12 +9,12 @@ services:
        restart: always
        expose:
                - "8083"
-               - "7072"
-               - "8090"
+               # - "7072"
+               # - "8090"
        ports:
                - "8083:8083"
-               - "7072:7072"
-               - "8090:8090"
+               # - "7072:7072"
+               # - "8090:8090"
        build: fhem
        privileged: true
        volumes:
