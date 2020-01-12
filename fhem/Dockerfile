@@ -10,6 +10,7 @@ ENV TERM xterm
 RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends
 RUN apt-get -y --force-yes install \
 perl \
+perl-base \
 wget \
 git \
 apt-utils \
@@ -24,6 +25,7 @@ telnet \
 usbutils \
 sqlite3 \
 mc \
+gcc \
 htop \
 net-tools \
 nano \

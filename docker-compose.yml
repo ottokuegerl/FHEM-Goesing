@@ -9,17 +9,19 @@ services:
        restart: always
        expose:
                - "8083"
-               # - "7072"
+               - "1883"
                # - "8090"
        ports:
                - "8083:8083"
-               # - "7072:7072"
+               - "1883:1883"
                # - "8090:8090"
        build: fhem
        privileged: true
        volumes:
                # path on the host:path within container
-               # ./fhem/start.sh --> /home/intel-nuc/docker/FHEM-Goesing/fhem/start.sh
+               # localdir: /home/nuc8/tmp/home/nuc8/tmp
+               # containerdir: /opt/fhem/log
+               # ./fhem/start.sh --> /home/nuc8/docker/FHEM-Goesing/fhem/start.sh
                - ./fhem/start.sh:/opt/fhem/start.sh
                - ./fhem/log/:/opt/fhem/log
                - ./fhem/backup/:/opt/fhem/backup
