@@ -2,16 +2,18 @@ FROM debian:jessie
 
 MAINTAINER Otto KUEGERL
 
-ENV FHEM_VERSION 5.8
+ENV FHEM_VERSION 5.9
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 # Install dependencies
-RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends apt-utils
+RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends
 RUN apt-get -y --force-yes install \
 perl \
+perl-base \
 wget \
 git \
+apt-utils \
 apt-transport-https \
 sudo etherwake \
 dfu-programmer \
@@ -23,42 +25,55 @@ telnet \
 usbutils \
 sqlite3 \
 mc \
+gcc \
 htop \
 net-tools \
-nano
+nano \
+sendemail
 
 # Install perl packages
 RUN apt-get -y --force-yes install \
-libavahi-compat-libdnssd-dev \
 libalgorithm-merge-perl \
+libavahi-compat-libdnssd-dev \
 libclass-dbi-mysql-perl \
 libclass-isa-perl \
 libcommon-sense-perl \
 libdatetime-format-strptime-perl \
-libdbi-perl \
+libdbd-sqlite3-perl libdbi-perl \
 libdevice-serialport-perl \
 libdpkg-perl \
 liberror-perl \
 libfile-copy-recursive-perl \
 libfile-fcntllock-perl \
 libio-socket-ip-perl \
+libio-socket-multicast-perl \
 libio-socket-ssl-perl \
 libjson-perl \
 libjson-xs-perl \
 libmail-sendmail-perl \
+libnet-telnet-perl \
+libsoap-lite-perl \
 libsocket-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
 libterm-readkey-perl \
 libterm-readline-perl-perl \
+libtext-diff-perl \
 libwww-perl \
 libxml-simple-perl \
-libdbd-sqlite3-perl \
-libtext-diff-perl \
-libconvert-base32-perl \
-libauthen-oath-perl \
-libcrypt-urandom-perl \
-libnet-snmp-perl
+libcgi-pm-perl \
+libtimedate-perl \
+libmail-imapclient-perl \
+libgd-graph-perl \
+libtext-csv-perl \
+liblist-moreutils-perl \
+ttf-liberation \
+libimage-librsvg-perl \
+libgd-text-perl \
+libsocket6-perl \
+libio-socket-inet6-perl \
+libmime-base64-perl \
+libimage-info-perl
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
@@ -79,6 +94,6 @@ COPY data/mycfg/ ./mycfg/
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
 COPY start.sh ./
 
-EXPOSE 8083 7072 8090
+EXPOSE 8083
 
 CMD bash /opt/fhem/start.sh

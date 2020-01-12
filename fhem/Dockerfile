@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 MAINTAINER Otto KUEGERL
 
@@ -9,37 +9,14 @@ ENV TERM xterm
 # Install dependencies
 RUN apt-get update && apt-get upgrade -y --force-yes && apt-get install -y --force-yes --no-install-recommends
 RUN apt-get -y --force-yes install \
-perl \
-perl-base \
-wget \
-git \
-apt-utils \
-apt-transport-https \
-sudo etherwake \
-dfu-programmer \
-build-essential \
-snmpd \
-snmp \
-vim \
-telnet \
-usbutils \
-sqlite3 \
-mc \
-gcc \
-htop \
-net-tools \
-nano \
-sendemail
-
-# Install perl packages
-RUN apt-get -y --force-yes install \
 libalgorithm-merge-perl \
 libavahi-compat-libdnssd-dev \
 libclass-dbi-mysql-perl \
 libclass-isa-perl \
 libcommon-sense-perl \
 libdatetime-format-strptime-perl \
-libdbd-sqlite3-perl libdbi-perl \
+libdbd-sqlite3-perl \
+libdbi-perl \
 libdevice-serialport-perl \
 libdpkg-perl \
 liberror-perl \
@@ -48,6 +25,7 @@ libfile-fcntllock-perl \
 libio-socket-ip-perl \
 libio-socket-multicast-perl \
 libio-socket-ssl-perl \
+libnet-ssleay-perl \
 libjson-perl \
 libjson-xs-perl \
 libmail-sendmail-perl \
@@ -73,7 +51,27 @@ libgd-text-perl \
 libsocket6-perl \
 libio-socket-inet6-perl \
 libmime-base64-perl \
-libimage-info-perl
+libimage-info-perl \
+libsys-statistics-linux-perl \
+libdigest-crc-perl \
+libxml-parser-lite-perl \
+libxml-treebuilder-perl \
+libhtml-treebuilder-xpath-perl \
+libhtml-tableextract-perl \
+libconvert-base32-perl \
+libauthen-oath-perl \
+libcrypt-urandom-perl \
+mailutils \
+ssmtp \
+mysql-server \
+mysql-client \
+libclass-dbi-mysql-perl \
+librpc-xml-perl \
+cpanminus
+
+
+# Install perl packages
+RUN apt-get -y --force-yes install \
 
 # Install FHEM
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
@@ -94,6 +92,6 @@ COPY data/mycfg/ ./mycfg/
 COPY data/fhemicon_dark_cpid.png /opt/fhem/www/images/default
 COPY start.sh ./
 
-EXPOSE 8083
+# EXPOSE 8083
 
 CMD bash /opt/fhem/start.sh
