@@ -45,6 +45,9 @@ Since all data in the container is static, you have to delete the container and 
 - root@f42651c7dc3a:/opt/fhem# apt-get install curl
 
 ## Portainer
+- docker volume create portainer_data
+- docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v - portainer_data:/data portainer/portainer
+
 - Alle Container können komfortabel über die Portainer-Oberfläche verwaltet werden
 - docker pull portainer/portainer
 - docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
